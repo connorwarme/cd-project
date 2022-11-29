@@ -1,0 +1,10 @@
+.header {
+    width: 100vw;
+    background-color: aqua;
+}
+.headerTitle {
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px 0;
+}

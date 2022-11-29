@@ -1,0 +1,7 @@
+.footer {
+    width: inherit;
+    background-color: aqua;
+}
+.footerContent {
+    padding: 20px 0;
+}

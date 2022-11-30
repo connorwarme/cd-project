@@ -3,24 +3,35 @@ import React from "react";
 class Card extends React.Component {
     constructor(props) {
         super(props)
-        // this.state = {
-        //     name: 'Connor',
-        //     address: 'Long Branch',
-        //     city: '',
-        //     state: '',
-        //     zip: '',
-        // }
+        this.state = {
+            name: 'Connor',
+            address: '',
+            number: '765',
+            edit: false,
+        }
+    }
+    editCard() {
+        this.setState({
+            edit: true,
+        })
     }
     render() {
-        const { fullname, address, city, state, zip } = this.props;
+        if (!(this.state.edit)) {
         return (
             <div className="card">
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Address" />
-                <input type="text" placeholder="City" />
-                <input type="text" placeholder="State" />
-                <input type="text" placeholder="Zip" />
+                <h1>Name: {this.state.name}</h1>
+                <h3>Address: {this.state.address}</h3>
+                <h3>Phone: {this.state.number}</h3>
+                <button onClick={()=>this.editCard()}>Edit</button>
             </div>
+        )}
+        return (
+            <div className="card">
+                <input type="text" placeholder={this.state.name}></input>
+                <input type="text" placeholder={this.state.address}></input>
+                <input type="text" placeholder={this.state.number}></input>
+            <button onClick={()=>this.changeMessage()}>Save</button>
+        </div>
         )
     }
 }

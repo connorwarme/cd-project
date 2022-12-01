@@ -6,8 +6,9 @@ class Card extends React.Component {
         super(props)
         this.state = {
             name: 'Connor',
-            address: 'Flagstaff Way',
-            number: '765',
+            position: 'Senior Developer',
+            number: '1234567890',
+            email: 'connor.warme@gmail.com',
             edit: false,
         }
         this.handleChange = this.handleChange.bind(this);
@@ -19,9 +20,8 @@ class Card extends React.Component {
         })
     }
     handleChange(e) {
-        console.log(e.key);
         this.setState({
-            name: e.target.value,
+            [e.target.name]: e.target.value,
         })
     }
     saveCard(e) {
@@ -31,22 +31,24 @@ class Card extends React.Component {
         })
     }
     render() {
-        const { name, address, number, edit } = this.state;
+        const { name, position, email, number, edit } = this.state;
         if (!(edit)) {
         return (
             <div className="card">
                 <h1>Name: {name}</h1>
-                <h3>Address: {address}</h3>
+                <h2>Position: {position}</h2>
                 <h3>Phone: {number}</h3>
+                <h3>Email: {email}</h3>
                 <button onClick={()=>this.editCard()}>Edit</button>
             </div>
         )}
         return (
             <div className="card">
             <form onSubmit={this.saveCard}>
-                <Input value={name} edit={this.handleChange} />
-                <input type="text" placeholder={address}></input>
-                <input type="text" placeholder={number}></input>
+                <Input type="text" name="name" value={name} edit={this.handleChange} />
+                <Input type="text" name="position" value={position} edit={this.handleChange} />
+                <Input type="tel" name="number" value={number} edit={this.handleChange} />
+                <Input type="email" name="email" value={email} edit={this.handleChange} />
                 <button type="submit">Save</button>
             </form>
         </div>

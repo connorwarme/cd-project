@@ -1,6 +1,7 @@
 import React from "react";
 import Edit from "./Edit";
 import Preview from "./Preview";
+import "../styles/Body.css";
 
 class Body extends React.Component {
     constructor(props) {
@@ -51,10 +52,10 @@ saveCard(e) {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <Edit data={this.state} save={this.saveCard} changeP={this.handlePersonalChange}/>
                 
-                <Preview />
+                <Preview data={this.state}/>
             </div>
         )
     }

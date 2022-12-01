@@ -10,6 +10,7 @@ class Personal extends React.Component {
         const { save, change } = this.props;
         return (
             <div className="card">
+            Personal Component:
               <form onSubmit={save}>
                 <Input type="text" name="name" value={name} edit={change} />
                 <Input type="text" name="position" value={position} edit={change} />

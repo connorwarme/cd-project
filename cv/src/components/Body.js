@@ -23,6 +23,8 @@ class Body extends React.Component {
             degree: '',
             begin: '',
             end: '',
+            work: {},
+            workstack: [],
     }
     this.handlePersonalChange = this.handlePersonalChange.bind(this);
     this.saveCard = this.saveCard.bind(this);

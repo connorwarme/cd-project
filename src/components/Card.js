@@ -1,36 +1,54 @@
 import React from "react";
+import Input from "./Input";
 
 class Card extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             name: 'Connor',
-            address: '',
+            address: 'Flagstaff Way',
             number: '765',
             edit: false,
         }
+        this.handleChange = this.handleChange.bind(this);
+        this.saveCard = this.saveCard.bind(this);
     }
     editCard() {
         this.setState({
             edit: true,
         })
     }
+    handleChange(e) {
+        console.log(e.key);
+        this.setState({
+            name: e.target.value,
+        })
+    }
+    saveCard(e) {
+        e.preventDefault();
+        this.setState({
+            edit: false,
+        })
+    }
     render() {
-        if (!(this.state.edit)) {
+        const { name, address, number, edit } = this.state;
+        if (!(edit)) {
         return (
             <div className="card">
-                <h1>Name: {this.state.name}</h1>
-                <h3>Address: {this.state.address}</h3>
-                <h3>Phone: {this.state.number}</h3>
+                <h1>Name: {name}</h1>
+                <h3>Address: {address}</h3>
+                <h3>Phone: {number}</h3>
                 <button onClick={()=>this.editCard()}>Edit</button>
             </div>
         )}
         return (
             <div className="card">
-                <input type="text" placeholder={this.state.name}></input>
-                <input type="text" placeholder={this.state.address}></input>
-                <input type="text" placeholder={this.state.number}></input>
-            <button onClick={()=>this.changeMessage()}>Save</button>
+            <form onSubmit={this.saveCard}>
+                <Input value={name} edit={this.handleChange} />
+                <input type="text" placeholder={address}></input>
+                <input type="text" placeholder={number}></input>
+                <button type="submit">Save</button>
+            </form>
         </div>
         )
     }

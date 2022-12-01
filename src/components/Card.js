@@ -1,18 +1,17 @@
 import React from "react";
 import Input from "./Input";
 import Personal from "./Personal";
+import Work from "./Work";
 
 class Card extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            personal: {
-                name: 'Connor',
-                position: 'Junior Developer',
-                number: '1234567890',
-                email: 'connor.warme@gmail.com',
-                photo: '',
-            },
+            name: 'Connor',
+            position: 'Junior Developer',
+            number: '1234567890',
+            email: 'connor.warme@gmail.com',
+            photo: '',
             edit: false,
         }
         this.editCard = this.editCard.bind(this);
@@ -26,25 +25,19 @@ class Card extends React.Component {
     }
     handleChange(e) {
         this.setState({
-            [e.target.name]: e.target.value,
+                [e.target.name]: e.target.value,
         })
-        console.log(e.target.name)
     }
     saveCard(e) {
         e.preventDefault();
-        this.setState({
-            personal: {
-                name: 'false',
-            }
-        })
-        console.log(this.state.personal);
+        // don't really need a save button.. !!!
+        console.log(this.state);
     }
     render() {
-        const { personal } = this.state;
-        const { name, position, email, number, photo } = personal;
+        const { name, position, email, number, photo } = this.state;
         return (
             <div>
-                <Personal value={personal} save={this.saveCard} change={this.handleChange}/>
+                <Personal value={this.state} save={this.saveCard} change={this.handleChange}/>
                 <div className="card">
                     <h1>Name: {name}</h1>
                     <h2>Position: {position}</h2>
@@ -53,6 +46,7 @@ class Card extends React.Component {
                     <div>Photo: {photo}</div>
                     <button onClick={()=>this.editCard()}>Edit</button>
                 </div>
+                <Work />
             </div>
         )
     }
@@ -66,13 +60,5 @@ export default Card;
 
 //     )}
 //     return (
-//         <div className="card">
-//         <form onSubmit={this.saveCard}>
-//             <Input type="text" name="name" value={name} edit={this.handleChange} />
-//             <Input type="text" name="position" value={position} edit={this.handleChange} />
-//             <Input type="tel" name="number" value={number} edit={this.handleChange} />
-//             <Input type="email" name="email" value={email} edit={this.handleChange} />
-//             <Input type="file" name="photo" value={photo} edit={this.handleChange} />
-//             <button type="submit">Save</button>
-//         </form>
+
 //     </div>

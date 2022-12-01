@@ -9,8 +9,10 @@ class Card extends React.Component {
             position: 'Senior Developer',
             number: '1234567890',
             email: 'connor.warme@gmail.com',
+            photo: '',
             edit: false,
         }
+        this.editCard = this.editCard.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.saveCard = this.saveCard.bind(this);
     }
@@ -31,7 +33,7 @@ class Card extends React.Component {
         })
     }
     render() {
-        const { name, position, email, number, edit } = this.state;
+        const { name, position, email, number, photo, edit } = this.state;
         if (!(edit)) {
         return (
             <div className="card">
@@ -39,6 +41,7 @@ class Card extends React.Component {
                 <h2>Position: {position}</h2>
                 <h3>Phone: {number}</h3>
                 <h3>Email: {email}</h3>
+                <div>Photo: {photo}</div>
                 <button onClick={()=>this.editCard()}>Edit</button>
             </div>
         )}
@@ -49,6 +52,7 @@ class Card extends React.Component {
                 <Input type="text" name="position" value={position} edit={this.handleChange} />
                 <Input type="tel" name="number" value={number} edit={this.handleChange} />
                 <Input type="email" name="email" value={email} edit={this.handleChange} />
+                <Input type="file" name="photo" value={photo} edit={this.handleChange} />
                 <button type="submit">Save</button>
             </form>
         </div>

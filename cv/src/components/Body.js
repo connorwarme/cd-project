@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from 'uuid';
 import Edit from "./Edit";
 import Preview from "./Preview";
 import "../styles/Body.css";
@@ -23,7 +24,10 @@ class Body extends React.Component {
             degree: '',
             begin: '',
             end: '',
-            work: {},
+            work: {
+                intel: '',
+                id: uuidv4(),
+            },
             workstack: [],
     }
     this.handlePersonalChange = this.handlePersonalChange.bind(this);

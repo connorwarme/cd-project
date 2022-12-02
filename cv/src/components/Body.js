@@ -29,6 +29,11 @@ class Body extends React.Component {
                 id: uuidv4(),
             },
             workstack: [],
+            uni: {
+                intel: '',
+                id: uuidv4(),
+            },
+            unistack: [],
     }
     this.handlePersonalChange = this.handlePersonalChange.bind(this);
     this.saveCard = this.saveCard.bind(this);

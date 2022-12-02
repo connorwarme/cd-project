@@ -1,6 +1,7 @@
 import React from "react";
 import Personal from "./Personal";
 import Work from "./Work";
+import Education from "./Education";
 
 class Edit extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class Edit extends React.Component {
                 <Personal value={data} save={save} change={changeP}/>
                 
                 <Work value={data} change={changeP}/>
-                
+                <Education data={data.uni}/>
             </div>
         )
     }

@@ -1,32 +1,32 @@
 import React from "react";
 import { v4 as uuidv4 } from 'uuid';
-import EdUnit from "./EdUnit";
+import WorkUnit from "./WorkUnit";
 
-class Education extends React.Component {
+class Career extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            parent: this.props.data,
+            workList: this.props.data,
         }
         this.findUnit = this.findUnit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.createNewUnit = this.createNewUnit.bind(this);
     }
     findUnit(id) {
-        const unit = this.state.parent.find(index => index.id === id);
-        return this.state.parent.indexOf(unit);
+        const unit = this.state.workList.find(index => index.id === id);
+        return this.state.workList.indexOf(unit);
     }
     handleChange(e) {
         const id = e.target.parentElement.parentElement.id;
         const index = this.findUnit(id);
-        const objCopy = this.state.parent[index];
+        const objCopy = this.state.workList[index];
         objCopy[e.target.name] = e.target.value;
-        const parentCopy = this.state.parent;
-        parentCopy[index] = objCopy;
+        const workListCopy = this.state.workList;
+        workListCopy[index] = objCopy;
         this.setState({
-            parent: parentCopy,
+            workList: workListCopy,
         })
-        this.props.change(parentCopy);
+        this.props.change(workListCopy);
     }
     createNewUnit() {
         const unit = {
@@ -39,20 +39,13 @@ class Education extends React.Component {
             details: '',
         }
         this.setState({
-            parent: this.state.parent.concat(unit),
+            workList: this.state.workList.concat(unit),
         })
     }
     render() {
         return (
-            <div>
-                <div>Education Component</div>
-                {this.state.parent.map((unit) => {
-                    return <EdUnit key={unit.id} data={unit} edit={this.handleChange}/>
-                })}
-                <button onClick={this.createNewUnit}>Create</button>
-            </div>
+            <div></div>
         )
     }
 }
-
-export default Education;
+export default Career;

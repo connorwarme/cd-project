@@ -1,12 +1,12 @@
 import React from "react";
 import Input from "./Input";
 
-class Work extends React.Component {
+class WorkUnit extends React.Component {
     constructor(props) {
         super(props)
     }
     render() {
-        const { start, finish, company, title, details } = this.props.value;
+        const { start, finish, company, title, details } = this.props.data;
         const { change } = this.props;
         return (
             <div>
@@ -21,4 +21,4 @@ class Work extends React.Component {
     }
 }
 
-export default Work;
+export default WorkUnit;

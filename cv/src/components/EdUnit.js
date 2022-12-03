@@ -7,37 +7,23 @@ class EdUnit extends React.Component {
         super(props)
         this.state = {
             data: this.props.data,
-            id: uuidv4(),
-            school: '',
-            location: '',
+            school: this.props.data.school,
+            location: this.props.data.location,
         }
         this.handleChange = this.handleChange.bind(this);
-        this.updateData = this.updateData.bind(this);
     }
     handleChange(e) {
         this.setState({
             [e.target.name]: e.target.value,
         })
-        this.updateData()
-    }
-    updateData() {
-        const unit = {
-            id: this.state.id,
-            school: this.state.school,
-            location: this.state.location,
-        }
-        console.log(this.state.data)
-        this.setState({
-            data: this.state.data.concat(unit)
-        })
     }
     render() {
-        const { school, location } = this.state;
+        const { school, location } = this.state
         return (
             <div>
                 <div>Ed Unit</div>
-                <Input type="text" name="school" value={school} edit={this.handleChange}/>
-                <Input type="text" name="location" value={location} edit={this.handleChange}/>
+                <Input type="text" name="school" value={this.props.data.school} edit={this.props.edit}/>
+                <Input type="text" name="location" value={this.props.data.location} edit={this.props.edit}/>
                 <h3>{school}</h3>
                 <h3>{location}</h3>
             </div>

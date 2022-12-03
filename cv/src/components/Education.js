@@ -8,40 +8,50 @@ class Education extends React.Component {
         super(props)
         this.state = {
             parent: this.props.data,
-            id: uuidv4(),
             school: '',
             location: '',
         }
-        this.updateValue = this.updateValue.bind(this);
+        this.findUnit = this.findUnit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.createNewUnit = this.createNewUnit.bind(this);
     }
-    updateValue() {
-        this.setState({
-            data: {
-                school: this.state.school,
-                location: this.state.location,
-            }
-        })
-        console.log(this.state.data)
+    findUnit(id) {
+        const unit = this.state.parent.find(index => index.id === id);
+        return this.state.parent.indexOf(unit);
     }
     handleChange(e) {
-        this.setState({
-            data: {
-                [e.target.name]: e.target.value,
-            }
-        })
+        console.log(this)
         this.setState({
             [e.target.name]: e.target.value,
         })
-        this.updateValue();
+    }
+    // const index = this.findUnit()
+    // const obj = this.state.parent[index];
+    // obj[e.target.name] = e.target.value;
+    // const newParent = this.state.parent;
+    // newParent[index] = obj;
+    createNewUnit() {
+        const unit = {
+            id: uuidv4(),
+            school: '',
+            location: ''
+        }
+        this.setState({
+            parent: this.state.parent.concat(unit),
+        })
+        console.log(this.state.parent);
+        // add unit to uniStack
+        // create display unit
     }
     render() {
         const { school, location } = this.state;
         return (
             <div>
+                {this.state.parent.map((unit) => {
+                    return <EdUnit key={unit.id} data={unit} edit={this.handleChange}/>
+                })}
                 {/* <Input type="text" name="school" value={school} edit={this.handleChange}/> */}
-                <h1>{this.state.id}</h1>
-                <EdUnit data={this.state.parent}/>
+                <button onClick={this.createNewUnit}>Create</button>
             </div>
         )
     }

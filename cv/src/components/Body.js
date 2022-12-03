@@ -38,7 +38,7 @@ class Body extends React.Component {
     this.handlePersonalChange = this.handlePersonalChange.bind(this);
     this.saveCard = this.saveCard.bind(this);
     // this.handleWorkChange = this.handleWorkChange.bind(this);
-    // this.handleUniChange = this.handleUniChange.bind(this);
+    this.handleUniChange = this.handleUniChange.bind(this);
 }
 handlePersonalChange(e) {
     this.setState({
@@ -55,16 +55,16 @@ saveCard(e) {
 //         works: this.state.works.concat(input),
 //     })
 // }
-// handleUniChange(input) {
-//     this.setState({
-//         unis: this.state.unis.concat(input),
-//     })
-// }
+handleUniChange(updatedArray) {
+    this.setState({
+        unistack: updatedArray,
+    })
+}
 
     render() {
         return (
             <div className="container">
-                <Edit data={this.state} save={this.saveCard} changeP={this.handlePersonalChange}/>
+                <Edit data={this.state} save={this.saveCard} changeP={this.handlePersonalChange} changeU={this.handleUniChange}/>
                 
                 <Preview data={this.state}/>
             </div>

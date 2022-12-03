@@ -29,6 +29,7 @@ class Education extends React.Component {
         this.setState({
             parent: parentCopy,
         })
+        this.props.change(parentCopy);
     }
     createNewUnit() {
         const unit = {

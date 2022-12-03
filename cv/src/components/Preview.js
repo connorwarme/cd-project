@@ -20,7 +20,9 @@ class Preview extends React.Component {
                 <h3>{data.finish}</h3>
                 <h3>{data.details}</h3>
                 {
-                    data.unistack.map(uni => <h5>{uni.school}</h5>)
+                    data.unistack.map(uni => {
+                        return <h5 key={uni.id}>{uni.school}</h5>
+                })
                     }
             </div>
         )

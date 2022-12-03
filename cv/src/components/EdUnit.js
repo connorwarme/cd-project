@@ -7,15 +7,17 @@ class EdUnit extends React.Component {
         super(props)
     }
     render() {
-        const { school, location } = this.props.data;
+        const { id, school, location, degree, from, to, details } = this.props.data;
+        const edit = this.props.edit;
         return (
-            <div id={this.props.data.id}>
+            <div id={id}>
                 <div>Education Unit</div>
-                <h4>{this.props.data.id}</h4>
-                <h4>{this.props.data.school}</h4>
-                <h4>{this.props.data.location}</h4>
-                <Input type="text" name="school" value={this.props.data.school} edit={this.props.edit}/>
-                <Input type="text" name="location" value={this.props.data.location} edit={this.props.edit}/>
+                <Input type="text" name="school" value={school} edit={edit}/>
+                <Input type="text" name="location" value={location} edit={edit}/>
+                <Input type="text" name="degree" value={degree} edit={edit}/>
+                <Input type="text" name="from" value={from} edit={edit}/>
+                <Input type="text" name="to" value={to} edit={edit}/>
+                <Input type="textarea" name="details" value={details} edit={edit}/>
             </div>
         )
     }

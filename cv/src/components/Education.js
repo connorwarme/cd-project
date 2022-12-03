@@ -8,8 +8,6 @@ class Education extends React.Component {
         super(props)
         this.state = {
             parent: this.props.data,
-            school: '',
-            location: '',
         }
         this.findUnit = this.findUnit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -35,7 +33,12 @@ class Education extends React.Component {
         const unit = {
             id: uuidv4(),
             school: '',
-            location: ''
+            location: '',
+            degree: '',
+            from: '',
+            to: '',
+            details: '',
+
         }
         this.setState({
             parent: this.state.parent.concat(unit),
@@ -51,7 +54,6 @@ class Education extends React.Component {
                 {this.state.parent.map((unit) => {
                     return <EdUnit key={unit.id} data={unit} edit={this.handleChange}/>
                 })}
-                {/* <Input type="text" name="school" value={school} edit={this.handleChange}/> */}
                 <button onClick={this.createNewUnit}>Create</button>
             </div>
         )

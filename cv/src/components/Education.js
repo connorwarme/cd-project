@@ -41,7 +41,7 @@ class Education extends React.Component {
             <div>
                 {/* <Input type="text" name="school" value={school} edit={this.handleChange}/> */}
                 <h1>{this.state.id}</h1>
-                <EdUnit />
+                <EdUnit data={this.state.parent}/>
             </div>
         )
     }

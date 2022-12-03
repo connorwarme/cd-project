@@ -19,7 +19,9 @@ class Preview extends React.Component {
                 <h3>{data.start}</h3>
                 <h3>{data.finish}</h3>
                 <h3>{data.details}</h3>
-                <h3>{data.uni.intel}</h3>
+                {
+                    data.unistack.map(uni => <h5>{uni.school}</h5>)
+                    }
             </div>
         )
     }

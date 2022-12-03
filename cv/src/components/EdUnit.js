@@ -5,27 +5,17 @@ import Input from "./Input";
 class EdUnit extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            data: this.props.data,
-            school: this.props.data.school,
-            location: this.props.data.location,
-        }
-        this.handleChange = this.handleChange.bind(this);
-    }
-    handleChange(e) {
-        this.setState({
-            [e.target.name]: e.target.value,
-        })
     }
     render() {
-        const { school, location } = this.state
+        const { school, location } = this.props.data;
         return (
-            <div>
-                <div>Ed Unit</div>
+            <div id={this.props.data.id}>
+                <div>Education Unit</div>
+                <h4>{this.props.data.id}</h4>
+                <h4>{this.props.data.school}</h4>
+                <h4>{this.props.data.location}</h4>
                 <Input type="text" name="school" value={this.props.data.school} edit={this.props.edit}/>
                 <Input type="text" name="location" value={this.props.data.location} edit={this.props.edit}/>
-                <h3>{school}</h3>
-                <h3>{location}</h3>
             </div>
         )
     }

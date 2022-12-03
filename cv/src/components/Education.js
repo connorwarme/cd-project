@@ -20,16 +20,16 @@ class Education extends React.Component {
         return this.state.parent.indexOf(unit);
     }
     handleChange(e) {
-        console.log(this)
+        const id = e.target.parentElement.parentElement.id;
+        const index = this.findUnit(id);
+        const objCopy = this.state.parent[index];
+        objCopy[e.target.name] = e.target.value;
+        const parentCopy = this.state.parent;
+        parentCopy[index] = objCopy;
         this.setState({
-            [e.target.name]: e.target.value,
+            parent: parentCopy,
         })
     }
-    // const index = this.findUnit()
-    // const obj = this.state.parent[index];
-    // obj[e.target.name] = e.target.value;
-    // const newParent = this.state.parent;
-    // newParent[index] = obj;
     createNewUnit() {
         const unit = {
             id: uuidv4(),
@@ -39,7 +39,6 @@ class Education extends React.Component {
         this.setState({
             parent: this.state.parent.concat(unit),
         })
-        console.log(this.state.parent);
         // add unit to uniStack
         // create display unit
     }
@@ -47,6 +46,7 @@ class Education extends React.Component {
         const { school, location } = this.state;
         return (
             <div>
+                <div>Education Component</div>
                 {this.state.parent.map((unit) => {
                     return <EdUnit key={unit.id} data={unit} edit={this.handleChange}/>
                 })}

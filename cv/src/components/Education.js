@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "./Input";
 import { v4 as uuidv4 } from 'uuid';
+import EdUnit from "./EdUnit";
 
 class Education extends React.Component {
     constructor(props) {
@@ -38,8 +39,9 @@ class Education extends React.Component {
         const { school, location } = this.state;
         return (
             <div>
-                <Input type="text" name="school" value={school} edit={this.handleChange}/>
+                {/* <Input type="text" name="school" value={school} edit={this.handleChange}/> */}
                 <h1>{this.state.id}</h1>
+                <EdUnit />
             </div>
         )
     }

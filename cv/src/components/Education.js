@@ -1,12 +1,13 @@
 import React from "react";
 import Input from "./Input";
+import { v4 as uuidv4 } from 'uuid';
 
 class Education extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: this.props.data.intel,
-            id: this.props.data.id,
+            parent: this.props.data,
+            id: uuidv4(),
             school: '',
             location: '',
         }

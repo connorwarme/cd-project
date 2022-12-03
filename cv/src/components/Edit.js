@@ -15,7 +15,7 @@ class Edit extends React.Component {
                 <Personal value={data} save={save} change={changeP}/>
                 
                 <Work value={data} change={changeP}/>
-                <Education data={data.uni}/>
+                <Education data={data.unistack}/>
             </div>
         )
     }

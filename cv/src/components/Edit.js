@@ -13,7 +13,7 @@ class Edit extends React.Component {
         return (
             <div>
                 <Personal value={data} save={save} change={changeP}/>
-                <Career data={data} change={changeP}/>
+                <Career data={data.workstack} change={changeP}/>
                 <Education data={data.unistack} change={changeU}/>
             </div>
         )

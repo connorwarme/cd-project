@@ -21,7 +21,7 @@ class Education extends React.Component {
         const index = this.findUnit(id);
         const objCopy = this.state.parent[index];
         objCopy[e.target.name] = e.target.value;
-        const parentCopy = this.state.parent;
+        const parentCopy = [...this.state.parent];
         parentCopy[index] = objCopy;
         this.setState({
             parent: parentCopy,

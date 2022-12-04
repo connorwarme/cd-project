@@ -21,7 +21,7 @@ class Career extends React.Component {
         const index = this.findUnit(id);
         const objCopy = this.state.workList[index];
         objCopy[e.target.name] = e.target.value;
-        const workListCopy = this.state.workList;
+        const workListCopy = [...this.state.workList];
         workListCopy[index] = objCopy;
         this.setState({
             workList: workListCopy,
@@ -44,7 +44,14 @@ class Career extends React.Component {
     }
     render() {
         return (
-            <div></div>
+            <div>
+                <div>Career Component</div>
+                {console.log(this.state.workList)}
+                    {this.state.workList.map((unit) => {
+                    return <WorkUnit key={unit.id} data={unit} edit={this.handleChange}/>
+                })}
+                <button onClick={this.createNewUnit}>Create</button>
+            </div>
         )
     }
 }

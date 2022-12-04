@@ -29,7 +29,7 @@ class Body extends React.Component {
 }
 handlePersonalChange(e) {
     this.setState({
-        [e.target.name]: e.target.value,
+        [e.target.id]: e.target.value,
     })
 }
 saveCard(e) {

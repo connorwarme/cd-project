@@ -11,11 +11,11 @@ class WorkUnit extends React.Component {
         return (
             <div id={id}>
                 <div>Work Component:</div>
-                <Input type="text" name="title" value={title} holder="Title" edit={edit}/>
-                <Input type="text" name="company" value={company} holder="Company" edit={edit}/>
-                <Input type="text" name="start" value={start} holder="Start" edit={edit}/>
-                <Input type="text" name="finish" value={finish} holder="Finish" edit={edit}/>
-                <Input type="textarea" name="details" value={details} holder="Description" edit={edit}/>
+                <Input type="text" id="title" value={title} holder="Title" edit={edit}/>
+                <Input type="text" id="company" value={company} holder="Company" edit={edit}/>
+                <Input type="text" id="start" value={start} holder="Start" edit={edit}/>
+                <Input type="text" id="finish" value={finish} holder="Finish" edit={edit}/>
+                <Input type="textarea" id="details" value={details} holder="Description" edit={edit}/>
                 <button onClick={del}>Delete</button>
             </div>
         )

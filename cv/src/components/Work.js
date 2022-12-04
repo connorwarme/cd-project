@@ -41,7 +41,7 @@ class Career extends React.Component {
         const id = e.target.parentElement.parentElement.id;
         const index = this.findUnit(id);
         const objCopy = {...this.state.workList[index]};
-        objCopy[e.target.name] = e.target.value;
+        objCopy[e.target.id] = e.target.value;
         const workListCopy = [...this.state.workList];
         workListCopy[index] = objCopy;
         this.updateState(workListCopy);

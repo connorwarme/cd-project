@@ -5,10 +5,11 @@ class Input extends React.Component {
         super(props)
     }
     render() {
-        const { type, name, value, holder, edit} = this.props;
+        const { type, id, value, holder, edit} = this.props;
         return (
             <div>
-                <input type={type} name={name} value={value} placeholder={holder} onChange={edit}></input>
+                <label htmlFor={id} value={holder}></label>
+                <input type={type} id={id} value={value} placeholder={holder} onChange={edit}></input>
             </div>
         )
     }

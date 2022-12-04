@@ -12,13 +12,13 @@ class Personal extends React.Component {
             <div className="personal">
             Personal Details
               <form onSubmit={save}>
-                <Input type="text" name="name" value={name} edit={change} />
-                <Input type="text" name="position" value={position} edit={change} />
-                <Input type="tel" name="number" value={number} edit={change} />
-                <Input type="email" name="email" value={email} edit={change} />
-                <Input type="text" name="location" value={location} edit={change} />
+                <Input type="text" name="name" value={name} holder="Name" edit={change} />
+                <Input type="text" name="position" value={position} holder="Title" edit={change} />
+                <Input type="tel" name="number" value={number} holder="Phone Number" edit={change} />
+                <Input type="email" name="email" value={email} holder="Email" edit={change} />
+                <Input type="text" name="location" value={location} holder="Location" edit={change} />
                 <Input type="file" name="photo" value={photo} edit={change} />
-                <Input type="textarea" name="bio" value={bio} edit={change} />
+                <Input type="textarea" name="bio" value={bio} holder="About Me" edit={change} />
                 <button type="submit">Save</button>
               </form>
             </div>

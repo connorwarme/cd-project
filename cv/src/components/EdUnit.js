@@ -11,12 +11,12 @@ class EdUnit extends React.Component {
         return (
             <div id={id}>
                 <div>Education Unit</div>
-                <Input type="text" name="school" value={school} edit={edit}/>
-                <Input type="text" name="location" value={location} edit={edit}/>
-                <Input type="text" name="degree" value={degree} edit={edit}/>
-                <Input type="text" name="from" value={from} edit={edit}/>
-                <Input type="text" name="to" value={to} edit={edit}/>
-                <Input type="textarea" name="details" value={details} edit={edit}/>
+                <Input type="text" name="school" value={school} holder="University" edit={edit}/>
+                <Input type="text" name="location" value={location} holder="Location" edit={edit}/>
+                <Input type="text" name="degree" value={degree} holder="Degree" edit={edit}/>
+                <Input type="text" name="from" value={from} holder="Start Date" edit={edit}/>
+                <Input type="text" name="to" value={to} holder="Graduation Date" edit={edit}/>
+                <Input type="textarea" name="details" value={details} holder="Description" edit={edit}/>
                 <button onClick={del}>Delete</button>
             </div>
         )

@@ -7,7 +7,7 @@ class EdUnit extends React.Component {
     }
     render() {
         const { id, school, location, degree, from, to, details } = this.props.data;
-        const edit = this.props.edit;
+        const { edit, del } = this.props;
         return (
             <div id={id}>
                 <div>Education Unit</div>
@@ -17,6 +17,7 @@ class EdUnit extends React.Component {
                 <Input type="text" name="from" value={from} edit={edit}/>
                 <Input type="text" name="to" value={to} edit={edit}/>
                 <Input type="textarea" name="details" value={details} edit={edit}/>
+                <button onClick={del}>Delete</button>
             </div>
         )
     }

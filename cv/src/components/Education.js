@@ -8,25 +8,10 @@ class Education extends React.Component {
         this.state = {
             parent: this.props.data,
         }
+        this.createNewUnit = this.createNewUnit.bind(this);
         this.findUnit = this.findUnit.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.createNewUnit = this.createNewUnit.bind(this);
-    }
-    findUnit(id) {
-        const unit = this.state.parent.find(index => index.id === id);
-        return this.state.parent.indexOf(unit);
-    }
-    handleChange(e) {
-        const id = e.target.parentElement.parentElement.id;
-        const index = this.findUnit(id);
-        const objCopy = this.state.parent[index];
-        objCopy[e.target.name] = e.target.value;
-        const parentCopy = [...this.state.parent];
-        parentCopy[index] = objCopy;
-        this.setState({
-            parent: parentCopy,
-        })
-        this.props.change(parentCopy);
+        this.deleteUnit = this.deleteUnit.bind(this);
     }
     createNewUnit() {
         const unit = {
@@ -42,12 +27,36 @@ class Education extends React.Component {
             parent: this.state.parent.concat(unit),
         })
     }
+    findUnit(id) {
+        const unit = this.state.parent.find(index => index.id === id);
+        return this.state.parent.indexOf(unit);
+    }
+    updateState(updatedArray) {
+        this.setState({
+            parent: updatedArray,
+        })
+        this.props.change(updatedArray);
+    }
+    handleChange(e) {
+        const id = e.target.parentElement.parentElement.id;
+        const index = this.findUnit(id);
+        const objCopy = this.state.parent[index];
+        objCopy[e.target.name] = e.target.value;
+        const parentCopy = [...this.state.parent];
+        parentCopy[index] = objCopy;
+        this.updateState(parentCopy);
+    }
+    deleteUnit(e) {
+        const id = e.target.parentElement.id;
+        const updatedArray = this.state.parent.filter(work => work.id !== id);
+        this.updateState(updatedArray);
+    }
     render() {
         return (
             <div>
                 <div>Education Component</div>
                 {this.state.parent.map((unit) => {
-                    return <EdUnit key={unit.id} data={unit} edit={this.handleChange}/>
+                    return <EdUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit}/>
                 })}
                 <button onClick={this.createNewUnit}>Create</button>
             </div>

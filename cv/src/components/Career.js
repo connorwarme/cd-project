@@ -56,7 +56,6 @@ class Career extends React.Component {
         return (
             <div>
                 <div>Career Component</div>
-                {console.log(this.state.workList)}
                     {this.state.workList.map((unit) => {
                     return <WorkUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit}/>
                 })}

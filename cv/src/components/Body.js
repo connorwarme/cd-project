@@ -1,5 +1,4 @@
 import React from "react";
-import { v4 as uuidv4 } from 'uuid';
 import Edit from "./Edit";
 import Preview from "./Preview";
 import "../styles/Body.css";
@@ -24,20 +23,11 @@ class Body extends React.Component {
             degree: '',
             begin: '',
             end: '',
-            work: {
-                intel: '',
-                id: uuidv4(),
-            },
             workstack: [],
-            uni: {
-                intel: '',
-                id: uuidv4(),
-            },
             unistack: [],
     }
     this.handlePersonalChange = this.handlePersonalChange.bind(this);
     this.saveCard = this.saveCard.bind(this);
-    // this.handleWorkChange = this.handleWorkChange.bind(this);
     this.handleUniChange = this.handleUniChange.bind(this);
 }
 handlePersonalChange(e) {
@@ -50,11 +40,6 @@ saveCard(e) {
     // don't really need a save button.. !!!
     console.log(this.state);
 }
-// handleWorkChange(input) {
-//     this.setState({
-//         works: this.state.works.concat(input),
-//     })
-// }
 handleUniChange(updatedArray) {
     this.setState({
         unistack: updatedArray,

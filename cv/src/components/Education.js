@@ -54,7 +54,7 @@ class Education extends React.Component {
     render() {
         return (
             <div>
-                <div>Education Component</div>
+                <div>Education</div>
                 {this.state.edList.map((unit) => {
                     return <EdUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit}/>
                 })}

@@ -1,6 +1,6 @@
 import React from "react";
 import Personal from "./Personal";
-import Career from "./Career";
+import Work from "./Work";
 import Education from "./Education";
 
 class Edit extends React.Component {
@@ -8,11 +8,11 @@ class Edit extends React.Component {
         super(props)
     }
     render() {
-        const { data, save, changeP, changeU  } = this.props;
+        const { data, save, changeP, changeW, changeU  } = this.props;
         return (
             <div>
                 <Personal value={data} save={save} change={changeP}/>
-                <Career data={data.workstack} change={changeP}/>
+                <Work data={data.workstack} change={changeW}/>
                 <Education data={data.unistack} change={changeU}/>
             </div>
         )

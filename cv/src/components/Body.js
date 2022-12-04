@@ -19,15 +19,12 @@ class Body extends React.Component {
             start: '2019',
             finish: '2022',
             details: 'I aint sure about this',
-            school: '',
-            degree: '',
-            begin: '',
-            end: '',
             workstack: [],
             unistack: [],
     }
     this.handlePersonalChange = this.handlePersonalChange.bind(this);
     this.saveCard = this.saveCard.bind(this);
+    this.handleWorkChange = this.handleWorkChange.bind(this);
     this.handleUniChange = this.handleUniChange.bind(this);
 }
 handlePersonalChange(e) {
@@ -40,6 +37,11 @@ saveCard(e) {
     // don't really need a save button.. !!!
     console.log(this.state);
 }
+handleWorkChange(updatedArray) {
+    this.setState({
+        workstack: updatedArray,
+    })
+}
 handleUniChange(updatedArray) {
     this.setState({
         unistack: updatedArray,
@@ -49,7 +51,7 @@ handleUniChange(updatedArray) {
     render() {
         return (
             <div className="container">
-                <Edit data={this.state} save={this.saveCard} changeP={this.handlePersonalChange} changeU={this.handleUniChange}/>
+                <Edit data={this.state} save={this.saveCard} changeP={this.handlePersonalChange} changeU={this.handleUniChange} changeW={this.handleWorkChange}/>
                 
                 <Preview data={this.state}/>
             </div>

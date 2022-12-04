@@ -7,15 +7,15 @@ class WorkUnit extends React.Component {
     }
     render() {
         const { id, start, finish, company, title, details } = this.props.data;
-        const { change, del } = this.props;
+        const { edit, del } = this.props;
         return (
             <div id={id}>
                 <div>Work Component:</div>
-                <Input type="text" name="title" value={title} edit={change}/>
-                <Input type="text" name="company" value={company} edit={change}/>
-                <Input type="text" name="start" value={start} edit={change}/>
-                <Input type="text" name="finish" value={finish} edit={change}/>
-                <Input type="text" name="details" value={details} edit={change}/>
+                <Input type="text" name="title" value={title} edit={edit}/>
+                <Input type="text" name="company" value={company} edit={edit}/>
+                <Input type="text" name="start" value={start} edit={edit}/>
+                <Input type="text" name="finish" value={finish} edit={edit}/>
+                <Input type="textarea" name="details" value={details} edit={edit}/>
                 <button onClick={del}>Delete</button>
             </div>
         )

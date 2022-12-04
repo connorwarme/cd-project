@@ -9,7 +9,7 @@ class Personal extends React.Component {
         const { name, position, email, number, location, photo, bio } = this.props.value;
         const { save, change } = this.props;
         return (
-            <div className="card">
+            <div className="personal">
             Personal Details
               <form onSubmit={save}>
                 <Input type="text" name="name" value={name} edit={change} />

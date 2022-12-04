@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "./Input";
+import "../styles/Personal.css";
 
 class Personal extends React.Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Personal extends React.Component {
         const { save, change } = this.props;
         return (
             <div className="personal">
-            Personal Details
+              <div>Personal Details</div>
               <form onSubmit={save}>
                 <Input type="text" id="name" value={name} holder="Name" edit={change} />
                 <Input type="text" id="position" value={position} holder="Title" edit={change} />

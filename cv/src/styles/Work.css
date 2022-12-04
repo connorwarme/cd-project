@@ -1,0 +1,13 @@
+.work-component {
+    /* display: grid; */
+}
+.dateContainer {
+    display: flex;
+    justify-content: center;
+}
+.dateContainer > div {
+    width: 220px;
+}
+.dateContainer > div > input {
+    width: 180px;
+}

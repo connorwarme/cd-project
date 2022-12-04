@@ -1,6 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from 'uuid';
 import WorkUnit from "./WorkUnit";
+import "../styles/Work.css";
 
 class Career extends React.Component {
     constructor(props) {
@@ -53,7 +54,7 @@ class Career extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="work-component">
                 <div>Work Experience</div>
                     {this.state.workList.map((unit) => {
                     return <WorkUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit}/>

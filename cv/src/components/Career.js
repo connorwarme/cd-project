@@ -9,24 +9,14 @@ class Career extends React.Component {
             workList: this.props.data,
         }
         this.findUnit = this.findUnit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
         this.createNewUnit = this.createNewUnit.bind(this);
+        this.updateState = this.updateState.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.deleteUnit = this.deleteUnit.bind(this);
     }
     findUnit(id) {
         const unit = this.state.workList.find(index => index.id === id);
         return this.state.workList.indexOf(unit);
-    }
-    handleChange(e) {
-        const id = e.target.parentElement.parentElement.id;
-        const index = this.findUnit(id);
-        const objCopy = this.state.workList[index];
-        objCopy[e.target.name] = e.target.value;
-        const workListCopy = [...this.state.workList];
-        workListCopy[index] = objCopy;
-        this.setState({
-            workList: workListCopy,
-        })
-        this.props.change(workListCopy);
     }
     createNewUnit() {
         const unit = {
@@ -42,13 +32,33 @@ class Career extends React.Component {
             workList: this.state.workList.concat(unit),
         })
     }
+    updateState(updatedList) {
+        this.setState({
+            workList: updatedList,
+        })
+        this.props.change(updatedList);
+    }
+    handleChange(e) {
+        const id = e.target.parentElement.parentElement.id;
+        const index = this.findUnit(id);
+        const objCopy = this.state.workList[index];
+        objCopy[e.target.name] = e.target.value;
+        const workListCopy = [...this.state.workList];
+        workListCopy[index] = objCopy;
+        this.updateState(workListCopy);
+    }
+    deleteUnit(e) {
+        const id = e.target.parentElement.id;
+        const updatedArray = this.state.workList.filter(work => work.id !== id);
+        this.updateState(updatedArray);
+    }
     render() {
         return (
             <div>
                 <div>Career Component</div>
                 {console.log(this.state.workList)}
                     {this.state.workList.map((unit) => {
-                    return <WorkUnit key={unit.id} data={unit} edit={this.handleChange}/>
+                    return <WorkUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit}/>
                 })}
                 <button onClick={this.createNewUnit}>Create</button>
             </div>

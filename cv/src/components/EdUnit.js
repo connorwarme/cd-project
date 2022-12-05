@@ -14,8 +14,10 @@ class EdUnit extends React.Component {
                 <Input type="text" id="school" value={school} holder="University" edit={edit}/>
                 <Input type="text" id="location" value={location} holder="Location" edit={edit}/>
                 <Input type="text" id="degree" value={degree} holder="Degree" edit={edit}/>
-                <Input type="text" id="from" value={from} holder="Start Date" edit={edit}/>
-                <Input type="text" id="to" value={to} holder="Graduation Date" edit={edit}/>
+                <div className="dateContainer">
+                    <Input type="text" id="from" value={from} holder="Start Date" edit={edit}/>
+                    <Input type="text" id="to" value={to} holder="Graduation Date" edit={edit}/>
+                </div>
                 <Input type="textarea" id="details" value={details} holder="Description" edit={edit}/>
                 <button onClick={del}>Delete</button>
             </div>

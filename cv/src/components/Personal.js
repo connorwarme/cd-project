@@ -19,7 +19,7 @@ class Personal extends React.Component {
                 <Input type="email" id="email" value={email} holder="Email" edit={change} />
                 <Input type="text" id="location" value={location} holder="Location" edit={change} />
                 <Input type="file" id="photo" value={photo} edit={change} />
-                <Input type="textarea" id="bio" value={bio} holder="About Me" edit={change} />
+                <textarea id="bio" value={bio} placeholder="About Me" onChange={change}></textarea>
                 <button type="submit">Save</button>
               </form>
             </div>

@@ -18,7 +18,7 @@ class EdUnit extends React.Component {
                     <Input type="text" id="from" value={from} holder="Start Date" edit={edit}/>
                     <Input type="text" id="to" value={to} holder="Graduation Date" edit={edit}/>
                 </div>
-                <Input type="textarea" id="details" value={details} holder="Description" edit={edit}/>
+                <Input type="text" id="details" value={details} holder="Description" edit={edit}/>
                 <div className="delete-unit">
                     <button onClick={del}>Delete</button>
                 </div>

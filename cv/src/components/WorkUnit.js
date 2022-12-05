@@ -17,7 +17,7 @@ class WorkUnit extends React.Component {
                     <Input type="text" id="start" value={start} holder="Start" edit={edit}/>
                     <Input type="text" id="finish" value={finish} holder="Finish" edit={edit}/>
                 </div>
-                <Input type="textarea" id="details" value={details} holder="Description" edit={edit}/>
+                <Input type="text" id="details" value={details} holder="Description" edit={edit}/>
                 <div className="delete-unit">
                     <button onClick={del}>Delete</button>
                 </div>

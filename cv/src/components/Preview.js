@@ -13,7 +13,7 @@ class Preview extends React.Component {
                 <h3>{data.number}</h3>
                 <h3>{data.email}</h3>
                 <h3>{data.photo}</h3>
-                <h3>{data.about}</h3>
+                <h3>{data.bio}</h3>
                 <h3>{data.title}</h3>
                 <h3>{data.company}</h3>
                 <h3>{data.start}</h3>

@@ -10,7 +10,7 @@ class WorkUnit extends React.Component {
         const { edit, del } = this.props;
         return (
             <div className="work-unit" id={id}>
-                <div>Work Component</div>
+                <div className="spacer"></div>
                 <Input type="text" id="title" value={title} holder="Title" edit={edit}/>
                 <Input type="text" id="company" value={company} holder="Company" edit={edit}/>
                 <div className="dateContainer">
@@ -18,7 +18,9 @@ class WorkUnit extends React.Component {
                     <Input type="text" id="finish" value={finish} holder="Finish" edit={edit}/>
                 </div>
                 <Input type="textarea" id="details" value={details} holder="Description" edit={edit}/>
-                <button onClick={del}>Delete</button>
+                <div className="delete-unit">
+                    <button onClick={del}>Delete</button>
+                </div>
             </div>
         )
     }

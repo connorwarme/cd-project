@@ -1,11 +1,38 @@
-.work-component {
-    /* display: grid; */
+.work-component,
+.education-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.work-unit::after {
+.section-spacer {
+    width: 450px;
+    height: 2px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    align-self: center;
+}
+.work-title,
+.education-title {
+    align-self: start;
+}
+.work-unit,
+.ed-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.spacer {
     content: "";
-    width: 100px;
-    height: 6px;
-    background-color: darkslategray;
+}
+.delete-unit {
+    width: 300px;
+    border-bottom: 2px solid slategray;
+}
+.delete-unit > button {
+    
+
 }
 .dateContainer {
     display: flex;

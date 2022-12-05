@@ -57,8 +57,8 @@ class Career extends React.Component {
             <div className="work-component">
                 <div className="section-spacer"></div>
                 <div className="work-title">Work Experience</div>
-                    {this.state.workList.map((unit) => {
-                    return <WorkUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit}/>
+                    {this.state.workList.map((unit, index) => {
+                    return <WorkUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit} intel={index}/>
                 })}
                 <button onClick={this.createNewUnit}>Create</button>
             </div>

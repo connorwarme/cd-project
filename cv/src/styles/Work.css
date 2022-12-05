@@ -13,9 +13,10 @@
     border-bottom: 2px solid darkblue;
     align-self: center;
 }
-.work-title,
-.education-title {
-    align-self: start;
+.sectionTitle {
+    text-align: start;
+    text-transform: uppercase;
+    margin-left: 4px;
 }
 .work-unit,
 .ed-unit {
@@ -26,13 +27,36 @@
 .spacer {
     content: "";
 }
-.delete-unit {
-    width: 300px;
-    border-bottom: 2px solid slategray;
+.header-unit {
+    width: 420px;
+    border: 2px solid slategray;
+    display: flex;
+    justify-content: space-between;
 }
-.delete-unit > button {
-    
-
+.header-unit > button {
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(173, 216, 230, 0.4);
+    height: 35px;
+    width: 35px;
+    position: relative;
+}
+.header-unit > button::after,
+.header-unit > button::before {
+    content: "";
+    height: 25px;
+    width: 4px;
+    background-color: black;
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    border-radius: 2px;
+}
+.header-unit > button::before {
+    transform: rotate(45deg);
+}
+.header-unit > button::after {
+    transform: rotate(315deg);
 }
 .dateContainer {
     display: flex;

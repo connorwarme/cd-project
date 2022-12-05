@@ -7,10 +7,17 @@ class WorkUnit extends React.Component {
     }
     render() {
         const { id, start, finish, company, title, details } = this.props.data;
-        const { edit, del } = this.props;
+        const { edit, del, intel } = this.props;
+        function headerText(input) {
+            return (input === 0 ? "Work Experience" : "")
+        }
         return (
             <div className="work-unit" id={id}>
                 <div className="spacer"></div>
+                <div className="header-unit">
+                    <div className="sectionTitle">{headerText(intel)}</div>
+                    <button onClick={del}></button>
+                </div>
                 <Input type="text" id="title" value={title} holder="Title" edit={edit}/>
                 <Input type="text" id="company" value={company} holder="Company" edit={edit}/>
                 <div className="dateContainer">
@@ -18,9 +25,7 @@ class WorkUnit extends React.Component {
                     <Input type="text" id="finish" value={finish} holder="Finish" edit={edit}/>
                 </div>
                 <Input type="text" id="details" value={details} holder="Description" edit={edit}/>
-                <div className="delete-unit">
-                    <button onClick={del}>Delete</button>
-                </div>
+
             </div>
         )
     }

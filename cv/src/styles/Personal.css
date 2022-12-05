@@ -4,6 +4,7 @@
     text-align: start;
     text-transform: uppercase;
     margin-left: 44px;
+    padding-top: 5px;
 }
 input {
     width: 400px;

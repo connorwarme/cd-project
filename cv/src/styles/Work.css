@@ -9,8 +9,8 @@
     width: 450px;
     height: 2px;
     background-color: white;
-    border: 2px solid black;
-    border-radius: 5px;
+    border-top: 2px solid darkblue;
+    border-bottom: 2px solid darkblue;
     align-self: center;
 }
 .work-title,

@@ -7,7 +7,7 @@ class Preview extends React.Component {
     render() {
         const { data } = this.props;
         return (
-            <div>
+            <div className="previewContent">
                 <h1>{data.name}</h1>
                 <h3>{data.position}</h3>
                 <h3>{data.number}</h3>

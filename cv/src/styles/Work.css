@@ -1,6 +1,12 @@
 .work-component {
     /* display: grid; */
 }
+.work-unit::after {
+    content: "";
+    width: 100px;
+    height: 6px;
+    background-color: darkslategray;
+}
 .dateContainer {
     display: flex;
     justify-content: center;

@@ -1,3 +1,10 @@
+.personal-title,
+.work-title,
+.education-title {
+    text-align: start;
+    text-transform: uppercase;
+    margin-left: 44px;
+}
 input {
     width: 400px;
     padding: 4px 10px;

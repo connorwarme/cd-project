@@ -11,7 +11,7 @@ class Personal extends React.Component {
         const { save, change } = this.props;
         return (
             <div className="personal">
-              <div>Personal Details</div>
+              <div className="personal-title">Personal Details</div>
               <form onSubmit={save}>
                 <Input type="text" id="name" value={name} holder="Name" edit={change} />
                 <Input type="text" id="position" value={position} holder="Title" edit={change} />

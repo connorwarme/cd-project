@@ -1,4 +1,11 @@
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-evenly;
+}
+.editContent,
+.previewContent {
+    width: 500px;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgba(126, 126, 126, 0.4);
 }

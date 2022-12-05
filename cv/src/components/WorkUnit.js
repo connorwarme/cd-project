@@ -9,7 +9,7 @@ class WorkUnit extends React.Component {
         const { id, start, finish, company, title, details } = this.props.data;
         const { edit, del } = this.props;
         return (
-            <div id={id}>
+            <div className="work-unit" id={id}>
                 <div>Work Component</div>
                 <Input type="text" id="title" value={title} holder="Title" edit={edit}/>
                 <Input type="text" id="company" value={company} holder="Company" edit={edit}/>

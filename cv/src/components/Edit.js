@@ -10,7 +10,7 @@ class Edit extends React.Component {
     render() {
         const { data, save, changeP, changeW, changeU  } = this.props;
         return (
-            <div>
+            <div className="editContent">
                 <Personal value={data} save={save} change={changeP}/>
                 <Work data={data.workstack} change={changeW}/>
                 <Education data={data.unistack} change={changeU}/>

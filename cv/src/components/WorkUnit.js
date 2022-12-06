@@ -4,6 +4,15 @@ import Input from "./Input";
 class WorkUnit extends React.Component {
     constructor(props) {
         super(props)
+        this.hoverOn = this.hoverOn.bind(this);
+        this.hoverOff = this.hoverOff.bind(this);
+    }
+    hoverOn(e) {
+        e.target.parentElement.parentElement.style.backgroundColor = "lightblue";
+        e.target.parentElement.style.backgroundColor = "white";
+    }
+    hoverOff(e) {
+        e.target.parentElement.parentElement.style.backgroundColor = "white";
     }
     render() {
         const { id, start, finish, company, title, details } = this.props.data;
@@ -16,7 +25,7 @@ class WorkUnit extends React.Component {
                 <div className="spacer"></div>
                 <div className="header-unit">
                     <div className="sectionTitle">{headerText(intel)}</div>
-                    <button onClick={del}></button>
+                    <button onMouseOver={this.hoverOn} onMouseOut={this.hoverOff} onClick={del}></button>
                 </div>
                 <Input type="text" id="title" value={title} holder="Title" edit={edit}/>
                 <Input type="text" id="company" value={company} holder="Company" edit={edit}/>

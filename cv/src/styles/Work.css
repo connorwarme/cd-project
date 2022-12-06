@@ -43,10 +43,10 @@
     content: "";
     height: 18px;
     width: 3px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(0, 0, 0);
     position: absolute;
     top: 1px;
-    left: 9px;
+    left: 8.5px;
     border-radius: 2px;
 }
 .header-unit > button::before {
@@ -54,6 +54,10 @@
 }
 .header-unit > button::after {
     transform: rotate(315deg);
+}
+.header-unit > button:hover {
+    background-color: rgb(173, 216, 230);
+    border-radius: 3px 3px 0 0;
 }
 .dateContainer {
     display: flex;

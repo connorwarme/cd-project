@@ -5,7 +5,8 @@
 .editContent,
 .previewContent {
     width: 500px;
-    border: 2px solid darkblue;
-    border-radius: 10px;
+    border: 2px solid rgb(0, 119, 182);
+    border-radius: 5px;
     box-shadow: 1px 1px 4px rgba(126, 126, 126, 0.4);
+    margin: 15px 0;
 }

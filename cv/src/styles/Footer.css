@@ -1,6 +1,7 @@
 .footer {
     width: inherit;
-    background-color: aqua;
+    color: rgb(202, 240, 248);
+    background-color: rgb(3, 4, 94);
 }
 .footerContent {
     padding: 20px 0;

@@ -1,6 +1,7 @@
 .header {
     width: 100vw;
-    background-color: aqua;
+    color: rgb(202, 240, 248);
+    background-color: rgb(3, 4, 94);
 }
 .headerTitle {
     font-size: 48px;

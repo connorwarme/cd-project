@@ -27,24 +27,26 @@
     width: 420px;
     display: flex;
     justify-content: space-between;
+    padding-top: 8px;
 }
 .header-unit > button {
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: rgba(173, 216, 230, 0.4);
-    height: 35px;
-    width: 35px;
+    height: 20px;
+    width: 20px;
     position: relative;
+    cursor: pointer;
 }
 .header-unit > button::after,
 .header-unit > button::before {
     content: "";
-    height: 25px;
-    width: 4px;
-    background-color: black;
+    height: 18px;
+    width: 3px;
+    background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top: 5px;
-    left: 16px;
+    top: 1px;
+    left: 9px;
     border-radius: 2px;
 }
 .header-unit > button::before {

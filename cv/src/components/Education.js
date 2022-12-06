@@ -48,7 +48,7 @@ class Education extends React.Component {
         this.updateState(edListCopy);
     }
     deleteUnit(e) {
-        const id = e.target.parentElement.id;
+        const id = e.target.parentElement.parentElement.id;
         const updatedArray = this.state.edList.filter(work => work.id !== id);
         this.updateState(updatedArray);
     }

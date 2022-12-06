@@ -48,8 +48,11 @@ class Career extends React.Component {
         this.updateState(workListCopy);
     }
     deleteUnit(e) {
-        const id = e.target.parentElement.id;
+        console.log('fire');
+        const id = e.target.parentElement.parentElement.id;
+        console.log(id);
         const updatedArray = this.state.workList.filter(work => work.id !== id);
+        console.log(updatedArray);
         this.updateState(updatedArray);
     }
     render() {

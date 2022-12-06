@@ -1,4 +1,6 @@
 import React from "react";
+import PrePersonal from "./PrePersonal";
+import "../styles/Preview.css"
 
 class Preview extends React.Component {
     constructor(props) {
@@ -8,6 +10,7 @@ class Preview extends React.Component {
         const { data } = this.props;
         return (
             <div className="previewContent">
+                <PrePersonal data={data} />
                 <h1>{data.name}</h1>
                 <h3>{data.position}</h3>
                 <h3>{data.number}</h3>

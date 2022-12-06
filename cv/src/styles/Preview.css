@@ -1,0 +1,22 @@
+.previewContent {
+    width: 800px;
+}
+
+.preview-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border-bottom: 4px solid rgb(0, 180, 216);
+
+}
+.preview-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.preview-name {
+    font-size: 48px;
+    text-transform: uppercase;
+}
+.preview-title {
+    font-size: 32px;
+}

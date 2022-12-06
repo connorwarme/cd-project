@@ -7,7 +7,7 @@ class Body extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: 'Connor',
+            name: 'Connor Warme',
             position: 'Software Engineer',
             number: '1234567890',
             email: 'connor.warme@gmail.com',

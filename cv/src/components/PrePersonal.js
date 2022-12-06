@@ -1,4 +1,9 @@
 import React from "react";
+import Phone from "../icons/phone.svg";
+import Email from "../icons/email.svg";
+import Locale from "../icons/map-marker.svg";
+import Github from "../icons/github.svg";
+import Linked from "../icons/linkedin.svg";
 
 // preview personal details
 class PrePersonal extends React.Component {
@@ -13,9 +18,11 @@ class PrePersonal extends React.Component {
                         <div className="preview-position">{data.position}</div>
                     </div>
                     <div className="preview-personal-container">
-                        <div>{data.number}</div>
-                        <div>{data.email}</div>
-                        <div>{data.location}</div>
+                        <div><img src={Phone} alt="Phone" />{data.number}</div>
+                        <div><img src={Email} alt="Email" />{data.email}</div>
+                        <div><img src={Locale} alt="Location" />{data.location}</div>
+                        <div><img src={Github} alt="Github" />{data.github}</div>
+                        <div><img src={Linked} alt="LinkedIn" />{data.linkedin}</div>
                     </div>
 
                 </div>

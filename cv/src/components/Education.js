@@ -59,7 +59,7 @@ class Education extends React.Component {
                 {this.state.edList.map((unit, index) => {
                     return <EdUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit} intel={index}/>
                 })}
-                <button onClick={this.createNewUnit}>Create</button>
+                <button className="addBtn" onClick={this.createNewUnit}>Add</button>
             </div>
         )
     }

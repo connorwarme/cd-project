@@ -62,7 +62,7 @@ class Career extends React.Component {
                     {this.state.workList.map((unit, index) => {
                     return <WorkUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit} intel={index}/>
                 })}
-                <button onClick={this.createNewUnit}>Create</button>
+                <button className="addBtn" onClick={this.createNewUnit}>Add</button>
             </div>
         )
     }

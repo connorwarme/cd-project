@@ -32,7 +32,7 @@
 .header-unit > button {
     border: none;
     border-radius: 3px;
-    background-color: rgba(173, 216, 230, 0.4);
+    background-color: rgba(173, 216, 230, 0.7);
     height: 20px;
     width: 20px;
     position: relative;
@@ -53,11 +53,15 @@
     transform: rotate(45deg);
 }
 .header-unit > button::after {
-    transform: rotate(315deg);
+    transform: rotate(135deg);
 }
 .header-unit > button:hover {
-    background-color: rgb(173, 216, 230);
-    border-radius: 3px 3px 0 0;
+    background-color: rgb(255, 255, 255);
+}
+.inputContent {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px 0;
 }
 .dateContainer {
     display: flex;

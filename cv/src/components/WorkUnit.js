@@ -8,11 +8,10 @@ class WorkUnit extends React.Component {
         this.hoverOff = this.hoverOff.bind(this);
     }
     hoverOn(e) {
-        e.target.parentElement.parentElement.style.backgroundColor = "lightblue";
-        e.target.parentElement.style.backgroundColor = "white";
+        e.target.parentElement.nextElementSibling.style.backgroundColor = "lightblue";
     }
     hoverOff(e) {
-        e.target.parentElement.parentElement.style.backgroundColor = "white";
+        e.target.parentElement.nextElementSibling.style.backgroundColor = "white";
     }
     render() {
         const { id, start, finish, company, title, details } = this.props.data;
@@ -25,15 +24,17 @@ class WorkUnit extends React.Component {
                 <div className="spacer"></div>
                 <div className="header-unit">
                     <div className="sectionTitle">{headerText(intel)}</div>
-                    <button onMouseOver={this.hoverOn} onMouseOut={this.hoverOff} onClick={del}></button>
+                    <button onMouseOver={this.hoverOn} onMouseOut={this.hoverOff} onClick={del} title="Delete"></button>
                 </div>
-                <Input type="text" id="title" value={title} holder="Title" edit={edit}/>
-                <Input type="text" id="company" value={company} holder="Company" edit={edit}/>
-                <div className="dateContainer">
-                    <Input type="text" id="start" value={start} holder="Start" edit={edit}/>
-                    <Input type="text" id="finish" value={finish} holder="Finish" edit={edit}/>
+                <div className="inputContent">
+                    <Input type="text" id="title" value={title} holder="Title" edit={edit}/>
+                    <Input type="text" id="company" value={company} holder="Company" edit={edit}/>
+                    <div className="dateContainer">
+                        <Input type="text" id="start" value={start} holder="Start" edit={edit}/>
+                        <Input type="text" id="finish" value={finish} holder="Finish" edit={edit}/>
+                    </div>
+                    <Input type="text" id="details" value={details} holder="Description" edit={edit}/>
                 </div>
-                <Input type="text" id="details" value={details} holder="Description" edit={edit}/>
 
             </div>
         )

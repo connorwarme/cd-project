@@ -6,15 +6,11 @@
     align-items: center;
 }
 .section-spacer {
-    width: 450px;
-    height: 2px;
-    background-color: white;
-    border-top: 2px solid darkblue;
-    border-bottom: 2px solid darkblue;
-    align-self: center;
+
 }
 .sectionTitle {
-    text-align: start;
+    display: flex;
+    align-items: flex-end;
     text-transform: uppercase;
     margin-left: 4px;
 }
@@ -29,7 +25,6 @@
 }
 .header-unit {
     width: 420px;
-    border: 2px solid slategray;
     display: flex;
     justify-content: space-between;
 }

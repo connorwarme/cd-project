@@ -4,13 +4,17 @@
     margin-left: 44px;
     padding-top: 5px;
 }
-input {
+input,
+textarea {
     width: 400px;
     padding: 4px 10px;
     border: 2px solid slategray;
     border-radius: 5px;
     margin: 4px 0;
 }
-input[type="textarea"] {
-    height: 40px;
+textarea {
+    height: 65px;
+    font-family: inherit;
+    font-size: 12px;
+    resize: none;
 }

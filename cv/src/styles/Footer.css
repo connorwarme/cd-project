@@ -14,3 +14,13 @@
 .footerContent {
     padding: 20px 0;
 }
+.linkContainer {
+    position: relative;
+}
+.linkContainer > a > img {
+    height: 40px;
+}
+.linkContainer > a:hover {
+    transform: scale(1.15);
+    filter: invert(100%);
+}

@@ -1,4 +1,6 @@
 import React from "react";
+import Github from "../icons/github.svg";
+import Linked from "../icons/linkedin.svg";
 import '../styles/Footer.css';
 
 class Footer extends React.Component {
@@ -8,10 +10,10 @@ class Footer extends React.Component {
                 <div className="footerContent">
                     <div className="linkContainer">
                         <a href="https://github.com/connorwarme">
-                            <img alt="GitHub Profile"></img>
+                            <img src={Github} alt="GitHub Profile"></img>
                         </a>
                         <a href="https://www.linkedin.com/in/connor-warme-103a09167">
-                            <img alt="LinkedIn Profile" target="_blank"></img>
+                            <img src={Linked} alt="LinkedIn Profile" target="_blank"></img>
                         </a>
                     </div>
                     <div className="textContainer">

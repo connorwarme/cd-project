@@ -11,6 +11,7 @@ class Education extends React.Component {
         }
         this.createNewUnit = this.createNewUnit.bind(this);
         this.findUnit = this.findUnit.bind(this);
+        this.findId = this.findId.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.deleteUnit = this.deleteUnit.bind(this);
     }
@@ -38,8 +39,17 @@ class Education extends React.Component {
         })
         this.props.change(updatedArray);
     }
+    findId(e) {
+        let id;
+        if (e.target.id === "from" || e.target.id === "to") {
+            id = e.target.parentElement.parentElement.parentElement.parentElement.id;
+        } else {
+            id = e.target.parentElement.parentElement.parentElement.id;
+        }
+        return id;
+    }
     handleChange(e) {
-        const id = e.target.parentElement.parentElement.id;
+        const id = this.findId(e);
         const index = this.findUnit(id);
         const objCopy = {...this.state.edList[index]};
         objCopy[e.target.id] = e.target.value;

@@ -1,5 +1,6 @@
 import React from "react";
 import PrePersonal from "./PrePersonal";
+import PreWork from "./PreWork";
 import "../styles/Preview.css"
 
 class Preview extends React.Component {
@@ -12,6 +13,9 @@ class Preview extends React.Component {
             <div className="previewContent">
                 <PrePersonal data={data} />
                 <div className="preview-work-header">Work Experience</div>
+                {data.workstack.map(work => {
+                    return <PreWork key={work.id} data={work} />
+                })}
                 <div className="preview-education-header">Education</div>
                 <h1>{data.name}</h1>
                 <h3>{data.position}</h3>

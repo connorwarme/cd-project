@@ -11,6 +11,8 @@ class Preview extends React.Component {
         return (
             <div className="previewContent">
                 <PrePersonal data={data} />
+                <div className="preview-work-header">Work Experience</div>
+                <div className="preview-education-header">Education</div>
                 <h1>{data.name}</h1>
                 <h3>{data.position}</h3>
                 <h3>{data.number}</h3>

@@ -3,8 +3,8 @@
 }
 
 .preview-header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
     border-bottom: 4px solid rgb(0, 180, 216);
 
 }
@@ -23,6 +23,7 @@
 .preview-personal-container > div {
     display: flex;
     align-items: center;
+    font-size: 12px;
 }
 .preview-personal-container > div > img {
     height: 20px;

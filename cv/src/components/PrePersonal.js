@@ -11,7 +11,6 @@ class PrePersonal extends React.Component {
         const { data } = this.props;
         return (
             <div>
-            <div>Preview Personal</div>
                 <div className="preview-header">
                     <div className="preview-name-container">
                         <div className="preview-name">{data.name}</div>
@@ -26,6 +25,7 @@ class PrePersonal extends React.Component {
                     </div>
 
                 </div>
+                <div className="preview-bio">{data.bio}</div>
             </div>
         )
     }

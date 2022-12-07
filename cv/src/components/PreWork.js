@@ -7,9 +7,10 @@ class PreWork extends React.Component {
         return (
             <div className="preview-work-unit">
                 <div className="preview-wu-header">
-                    <div className="preview-wu-info">{data.title}</div>
-                    <div className="preview-wu-details">
-                        <div>{data.company} |</div>
+                    <div className="preview-wu-title">{data.title}</div>
+                    <div className="preview-wu-info">
+                        <div>{data.company}</div>
+                        <div>|</div>
                         <div>{data.start} - {data.finish}</div>
                     </div>
                 </div>

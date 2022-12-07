@@ -7,9 +7,10 @@ class PreEd extends React.Component {
         return (
             <div className="preview-ed-unit">
                 <div className="preview-edu-header">
-                    <div className="preview-edu-info">{data.school}</div>
-                    <div className="preview-edu-details">
-                        <div>{data.location} |</div>
+                    <div className="preview-edu-school">{data.school}</div>
+                    <div className="preview-edu-info">
+                        <div>{data.location}</div>
+                        <div>|</div>
                         <div>{data.from} - {data.to}</div>
                     </div>
                 </div>

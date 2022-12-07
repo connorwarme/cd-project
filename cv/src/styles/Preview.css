@@ -1,12 +1,13 @@
 .previewContent {
-    width: 800px;
+    width: 600px;
+    padding: 40px;
+    text-align: start;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 .preview-header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 4px solid rgb(0, 180, 216);
-
+    border-bottom: 4px solid rgb(230, 57, 70);
 }
 .preview-name-container {
     display: flex;
@@ -14,11 +15,21 @@
     align-items: start;
 }
 .preview-name {
-    font-size: 48px;
+    font-size: 42px;
+    font-weight: 800;
+    color: rgb(69, 123, 157);
+    letter-spacing: .02em;
     text-transform: uppercase;
 }
-.preview-title {
+.preview-position {
     font-size: 32px;
+    font-style: italic;
+    margin: 12px 0;
+}
+.preview-personal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .preview-personal-container > div {
     display: flex;
@@ -26,5 +37,49 @@
     font-size: 12px;
 }
 .preview-personal-container > div > img {
-    height: 20px;
+    height: 18px;
+    margin: 0 3px;
+}
+.preview-work-header,
+.preview-education-header {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(69, 123, 157);
+    text-transform: uppercase;
+}
+.preview-wu-header,
+.preview-edu-header {
+    display: flex;
+    justify-content: space-between;
+}
+.preview-wu-title,
+.preview-edu-school {
+    color: grey;
+    font-weight: 600;
+}
+.preview-wu-info,
+.preview-edu-info {
+    display: flex;
+}
+.preview-wu-info > div:first-child,
+.preview-edu-info > div:first-child {
+    color: grey;
+}
+.preview-wu-info > div:last-child,
+.preview-edu-info > div:last-child {
+    font-weight: 500;
+}
+.preview-wu-info > div:nth-child(2n),
+.preview-edu-info > div:nth-child(2n) {
+    font-weight: 700;
+    padding: 0 5px;
+}
+.preview-edu-degree {
+    font-size: large;
+    font-style: italic;
+}
+.preview-wu-details,
+.preview-edu-details {
+    display: flex;
 }

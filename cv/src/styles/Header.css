@@ -5,8 +5,9 @@
     background-color: rgb(69, 123, 157);
 }
 .headerTitle {
+    font-family: 'Cinzel', Georgia, 'Times New Roman', Times, serif;
     font-size: 48px;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: lowercase;
     padding: 20px 0;
 }

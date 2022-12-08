@@ -10,7 +10,7 @@ const Print = ({data}) => {
                 <Preview data={data} ref={el => (componentRef = el)}/>
             </div>
             <ReactToPrint 
-                trigger={() => <button>Print to PDF</button>}
+                trigger={() => <button className="generatePDF">Generate PDF</button>}
                 content={() => componentRef}
             />
 

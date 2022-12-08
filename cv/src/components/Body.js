@@ -1,7 +1,5 @@
 import React from "react";
 import Edit from "./Edit";
-import Preview from "./Preview";
-import { ReactToPrint } from "react-to-print";
 import Print from "./Print";
 import "../styles/Body.css";
 

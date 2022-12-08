@@ -1,6 +1,7 @@
 .previewContent {
-    width: 600px;
-    padding: 40px;
+    width: 700px;
+    height: 900px;
+    padding: 40px 60px;
     text-align: start;
     font-family: 'Vollkorn';
 }

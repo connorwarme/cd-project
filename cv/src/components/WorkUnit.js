@@ -8,7 +8,7 @@ class WorkUnit extends React.Component {
         this.hoverOff = this.hoverOff.bind(this);
     }
     hoverOn(e) {
-        e.target.parentElement.nextElementSibling.style.backgroundColor = "rgba(144, 224, 239, 0.5)";
+        e.target.parentElement.nextElementSibling.style.backgroundColor = "rgba(168, 218, 220, 0.5)";
     }
     hoverOff(e) {
         e.target.parentElement.nextElementSibling.style.backgroundColor = "white";

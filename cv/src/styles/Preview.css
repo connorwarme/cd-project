@@ -53,6 +53,7 @@
     font-weight: 700;
     color: rgb(69, 123, 157);
     text-transform: uppercase;
+    margin: 12px 0 2px 0;
 }
 .preview-wu-header,
 .preview-edu-header {

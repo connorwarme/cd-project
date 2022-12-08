@@ -1,20 +1,21 @@
 .personal-title {
     text-align: start;
     text-transform: uppercase;
+    font-size: 18px;
     margin-left: 90px;
     padding-top: 5px;
 }
 input,
 textarea {
+    font-family: 'Faustina';
     width: 400px;
     padding: 4px 10px;
     border: 2px solid slategray;
-    border-radius: 5px;
+    border-radius: 3px;
     margin: 4px 0;
 }
 textarea {
     height: 65px;
-    font-family: inherit;
-    font-size: 12px;
+    font-size: 14px;
     resize: none;
 }

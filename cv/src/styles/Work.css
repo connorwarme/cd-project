@@ -9,6 +9,7 @@
 
 }
 .sectionTitleSolo {
+    font-size: 18px;
     align-self: flex-start;
     margin-left: 90px;
     text-transform: uppercase;
@@ -16,6 +17,7 @@
 .sectionTitle {
     display: flex;
     align-items: flex-end;
+    font-size: 18px;
     text-transform: uppercase;
     margin-left: 4px;
 }
@@ -36,8 +38,8 @@
 }
 .header-unit > button {
     border: none;
-    border-radius: 3px;
-    background-color: rgba(144, 224, 239, 0.5);
+    border-radius: 2px;
+    background-color: rgba(168, 218, 220, 0.5);
     height: 20px;
     width: 20px;
     position: relative;
@@ -66,7 +68,7 @@
 }
 .inputContent {
     background-color: rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 5px 0;
 }
 .dateContainer {
@@ -80,11 +82,13 @@
     width: 180px;
 }
 .addBtn {
+    font-family: 'Faustina';
     font-size: 16px;
+    font-weight: 500;
     background-color: white;
-    border: 2px solid rgb(0, 119, 182);
+    border: 2px solid rgb(69, 123, 157);
     border-radius: 2px;
-    padding: 2px 10px;
+    padding: 2px 10px 6px 10px;
     margin: 5px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0, 0, 0.58, 1.0);
@@ -92,9 +96,11 @@
 .addBtn:hover {
     cursor: pointer;
     transform: scale(1.1);
-
 }
 .addBtn:active {
     transform: scale(0.98);
     box-shadow: 1px 1px 3px black;
+}
+.education-component:last-child {
+    margin-bottom: 20px;
 }

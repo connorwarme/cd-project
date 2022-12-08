@@ -8,7 +8,10 @@
     width: 600px;
     background-color: white;
     border: 2px solid rgb(69, 123, 157);
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 1px 1px 4px rgba(126, 126, 126, 0.4);
     margin: 15px 0;
+}
+.previewContent {
+    border: 2px solid black;
 }

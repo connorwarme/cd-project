@@ -2,7 +2,7 @@
     width: 600px;
     padding: 40px;
     text-align: start;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Vollkorn';
 }
 .preview-header {
     display: flex;
@@ -15,6 +15,7 @@
     align-items: start;
 }
 .preview-name {
+    font-family: 'Cinzel';
     font-size: 42px;
     font-weight: 800;
     color: rgb(69, 123, 157);
@@ -47,8 +48,9 @@
 .preview-work-header,
 .preview-education-header {
     display: flex;
+    font-family: 'Cinzel';
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     color: rgb(69, 123, 157);
     text-transform: uppercase;
 }
@@ -72,7 +74,7 @@
 }
 .preview-wu-info > div:last-child,
 .preview-edu-info > div:last-child {
-    font-weight: 500;
+    font-weight: 400;
 }
 .preview-wu-info > div:nth-child(2n),
 .preview-edu-info > div:nth-child(2n) {
@@ -81,6 +83,7 @@
 }
 .preview-edu-degree {
     font-size: large;
+    font-weight: 500;
     font-style: italic;
 }
 .preview-wu-details,

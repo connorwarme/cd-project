@@ -3,15 +3,21 @@
     justify-content: space-evenly;
     background-color: rgb(241, 250, 238);
 }
-.editContent,
-.previewContent {
-    width: 600px;
+.editContent, 
+.printPreview {
     background-color: white;
     border: 2px solid rgb(69, 123, 157);
     border-radius: 3px;
     box-shadow: 1px 1px 4px rgba(126, 126, 126, 0.4);
     margin: 15px 0;
 }
+.editContent,
 .previewContent {
+    width: 600px;
+}
+.previewContent {
+    border: none;
+}
+.printPreview {
     border: 2px solid black;
 }

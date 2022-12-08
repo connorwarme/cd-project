@@ -1,6 +1,8 @@
 import React from "react";
 import Edit from "./Edit";
 import Preview from "./Preview";
+import { ReactToPrint } from "react-to-print";
+import Print from "./Print";
 import "../styles/Body.css";
 
 class Body extends React.Component {
@@ -53,8 +55,7 @@ handleUniChange(updatedArray) {
         return (
             <div className="container">
                 <Edit data={this.state} save={this.saveCard} changeP={this.handlePersonalChange} changeU={this.handleUniChange} changeW={this.handleWorkChange}/>
-                
-                <Preview data={this.state}/>
+                <Print data={this.state}/>
             </div>
         )
     }

@@ -3,10 +3,6 @@
   src: local('Stencil'), url(../fonts/BigShouldersStencilText-VariableFont_wght.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Meddon';
-  src: url(../fonts/Meddon-Regular.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Vollkorn';
   src: url(../fonts/Vollkorn-VariableFont_wght.ttf) format('truetype');
 }

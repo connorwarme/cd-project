@@ -24,3 +24,6 @@
     transform: scale(1.15);
     filter: invert(100%);
 }
+.footerText {
+    font-weight: 500;
+}

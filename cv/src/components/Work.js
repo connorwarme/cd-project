@@ -15,6 +15,7 @@ class Career extends React.Component {
         this.findId = this.findId.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.deleteUnit = this.deleteUnit.bind(this);
+        this.addTitle = this.addTitle.bind(this);
     }
     findUnit(id) {
         const unit = this.state.workList.find(index => index.id === id);
@@ -65,10 +66,16 @@ class Career extends React.Component {
         console.log(updatedArray);
         this.updateState(updatedArray);
     }
+    addTitle() {
+        if (this.state.workList.length === 0) {
+            return <div className="sectionTitleSolo">Work Experience</div>
+        }
+    }
     render() {
         return (
             <div className="work-component">
                 <div className="section-spacer"></div>
+                    {this.addTitle()}
                     {this.state.workList.map((unit, index) => {
                     return <WorkUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit} intel={index}/>
                 })}

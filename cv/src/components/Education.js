@@ -14,6 +14,7 @@ class Education extends React.Component {
         this.findId = this.findId.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.deleteUnit = this.deleteUnit.bind(this);
+        this.addTitle = this.addTitle.bind(this);
     }
     createNewUnit() {
         const unit = {
@@ -62,10 +63,16 @@ class Education extends React.Component {
         const updatedArray = this.state.edList.filter(work => work.id !== id);
         this.updateState(updatedArray);
     }
+    addTitle() {
+        if (this.state.edList.length === 0) {
+            return <div className="sectionTitleSolo">Education</div>
+        }
+    }
     render() {
         return (
             <div className="education-component">
                 <div className="section-spacer"></div>
+                {this.addTitle()}
                 {this.state.edList.map((unit, index) => {
                     return <EdUnit key={unit.id} data={unit} edit={this.handleChange} del={this.deleteUnit} intel={index}/>
                 })}

@@ -8,6 +8,11 @@
 .section-spacer {
 
 }
+.sectionTitleSolo {
+    align-self: flex-start;
+    margin-left: 90px;
+    text-transform: uppercase;
+}
 .sectionTitle {
     display: flex;
     align-items: flex-end;

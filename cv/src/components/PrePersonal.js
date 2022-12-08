@@ -20,8 +20,8 @@ class PrePersonal extends React.Component {
                         <div><img src={Phone} alt="Phone" />{data.number}</div>
                         <div><img src={Email} alt="Email" />{data.email}</div>
                         <div><img src={Locale} alt="Location" />{data.location}</div>
-                        <div><img src={Github} alt="Github" />{data.github}</div>
-                        <div><img src={Linked} alt="LinkedIn" />{data.linkedin}</div>
+                        <div><img src={Github} alt="GH Logo" /><a href={data.github} target="_blank" rel="noreferrer">GitHub</a></div>
+                        <div><img src={Linked} alt="LI Logo" /><a href={data.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></div>
                     </div>
 
                 </div>

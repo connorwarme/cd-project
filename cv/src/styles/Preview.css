@@ -40,6 +40,10 @@
     height: 18px;
     margin: 0 3px;
 }
+.preview-personal-container > div > a {
+    color: rgb(69, 123, 157);
+    font-weight: 600;
+}
 .preview-work-header,
 .preview-education-header {
     display: flex;

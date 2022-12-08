@@ -18,8 +18,8 @@ class Personal extends React.Component {
                 <Input type="tel" id="number" value={number} holder="Phone Number" edit={change} />
                 <Input type="email" id="email" value={email} holder="Email" edit={change} />
                 <Input type="text" id="location" value={location} holder="Location" edit={change} />
-                <Input type="url" id="github" value={github} edit={change} />
-                <Input type="url" id="linkedin" value={linkedin} edit={change} />
+                <Input type="url" id="github" value={github} holder="GitHub Profile" edit={change} />
+                <Input type="url" id="linkedin" value={linkedin} holder="LinkedIn Profile" edit={change} />
                 <div><textarea id="bio" value={bio} placeholder="About Me" onChange={change}></textarea></div>
               </form>
             </div>

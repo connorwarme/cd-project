@@ -21,7 +21,8 @@
 .printPreview {
     border: 2px solid rgb(230, 57, 70);
 }
-.generatePDF {
+.generatePDF,
+.generateDemo {
     border: 2px solid rgb(69, 123, 157);
     border-radius: 3px;
     background-color: rgb(255, 255, 255);
@@ -33,11 +34,13 @@
     transition-duration: 250ms;
     transition-timing-function: ease-in;
 }
-.generatePDF:hover {
+.generatePDF:hover,
+.generateDemo:hover {
     text-decoration: underline 3px rgb(230, 57, 70);
     cursor: pointer;
 }
-.generatePDF:active {
+.generatePDF:active,
+.generateDemo:active {
     transform: scale(0.98);
     box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }

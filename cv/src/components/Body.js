@@ -52,7 +52,10 @@ handleUniChange(updatedArray) {
     render() {
         return (
             <div className="container">
-                <Edit data={this.state} save={this.saveCard} changeP={this.handlePersonalChange} changeU={this.handleUniChange} changeW={this.handleWorkChange}/>
+                <div>
+                    <Edit data={this.state} save={this.saveCard} changeP={this.handlePersonalChange} changeU={this.handleUniChange} changeW={this.handleWorkChange}/>
+                    <button className="generateDemo" onClick={console.log('demo!')}>Generate Demo</button>
+                </div>
                 <Print data={this.state}/>
             </div>
         )

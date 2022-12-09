@@ -1,6 +1,6 @@
 .previewContent {
     width: 700px;
-    height: 900px;
+    min-height: 500px;
     padding: 40px 60px;
     text-align: start;
     font-family: 'Vollkorn';
@@ -45,6 +45,9 @@
 .preview-personal-container > div > a {
     color: rgb(69, 123, 157);
     font-weight: 600;
+}
+.preview-personal-container:last-child {
+    margin-bottom: 15px;
 }
 .preview-work-header,
 .preview-education-header {

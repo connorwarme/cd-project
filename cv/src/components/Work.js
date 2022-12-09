@@ -59,7 +59,6 @@ class Career extends React.Component {
         this.updateState(workListCopy);
     }
     deleteUnit(e) {
-        console.log('fire');
         const id = e.target.parentElement.parentElement.id;
         console.log(id);
         const updatedArray = this.state.workList.filter(work => work.id !== id);
@@ -71,6 +70,13 @@ class Career extends React.Component {
             return <div className="sectionTitleSolo">Work Experience</div>
         }
     }
+    componentDidMount() {
+        window.addEventListener('load', this.createNewUnit);
+     }
+    
+    componentWillUnmount() { 
+       window.removeEventListener('load', this.createNewUnit)  
+     }
     render() {
         return (
             <div className="work-component">

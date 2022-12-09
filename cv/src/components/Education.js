@@ -68,6 +68,13 @@ class Education extends React.Component {
             return <div className="sectionTitleSolo">Education</div>
         }
     }
+    componentDidMount() {
+        window.addEventListener('load', this.createNewUnit);
+     }
+    
+    componentWillUnmount() { 
+        window.removeEventListener('load', this.createNewUnit)  
+     }
     render() {
         return (
             <div className="education-component">

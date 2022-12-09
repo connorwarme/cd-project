@@ -1,97 +1,97 @@
 .previewContent {
-    width: 700px;
-    min-height: 500px;
-    padding: 40px 60px;
-    text-align: start;
-    font-family: 'Vollkorn';
+  width: 700px;
+  min-height: 500px;
+  padding: 40px 60px;
+  text-align: start;
+  font-family: "Vollkorn";
 }
 .preview-header {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 4px solid rgb(230, 57, 70);
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid rgb(230, 57, 70);
 }
 .preview-name-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 .preview-name {
-    font-family: 'Cinzel';
-    font-size: 42px;
-    font-weight: 800;
-    color: rgb(69, 123, 157);
-    letter-spacing: .02em;
-    text-transform: uppercase;
+  font-family: "Cinzel";
+  font-size: 42px;
+  font-weight: 800;
+  color: rgb(69, 123, 157);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 .preview-position {
-    font-size: 32px;
-    font-style: italic;
-    margin: 12px 0;
+  font-size: 32px;
+  font-style: italic;
+  margin: 12px 0;
 }
 .preview-personal-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .preview-personal-container > div {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
 }
 .preview-personal-container > div > img {
-    height: 18px;
-    margin: 0 3px;
+  height: 18px;
+  margin: 0 3px;
 }
 .preview-personal-container > div > a {
-    color: rgb(69, 123, 157);
-    font-weight: 600;
+  color: rgb(69, 123, 157);
+  font-weight: 600;
 }
 .preview-personal-container:last-child {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .preview-work-header,
 .preview-education-header {
-    display: flex;
-    font-family: 'Cinzel';
-    font-size: 20px;
-    font-weight: 700;
-    color: rgb(69, 123, 157);
-    text-transform: uppercase;
-    margin: 12px 0 2px 0;
+  display: flex;
+  font-family: "Cinzel";
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(69, 123, 157);
+  text-transform: uppercase;
+  margin: 12px 0 2px 0;
 }
 .preview-wu-header,
 .preview-edu-header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .preview-wu-title,
 .preview-edu-school {
-    color: grey;
-    font-weight: 600;
+  color: grey;
+  font-weight: 600;
 }
 .preview-wu-info,
 .preview-edu-info {
-    display: flex;
+  display: flex;
 }
 .preview-wu-info > div:first-child,
 .preview-edu-info > div:first-child {
-    color: grey;
+  color: grey;
 }
 .preview-wu-info > div:last-child,
 .preview-edu-info > div:last-child {
-    font-weight: 400;
+  font-weight: 400;
 }
 .preview-wu-info > div:nth-child(2n),
 .preview-edu-info > div:nth-child(2n) {
-    font-weight: 700;
-    padding: 0 5px;
+  font-weight: 700;
+  padding: 0 5px;
 }
 .preview-edu-degree {
-    font-size: large;
-    font-weight: 500;
-    font-style: italic;
+  font-size: large;
+  font-weight: 500;
+  font-style: italic;
 }
 .preview-wu-details,
 .preview-edu-details {
-    display: flex;
+  display: flex;
 }

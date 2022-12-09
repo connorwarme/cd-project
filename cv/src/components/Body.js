@@ -4,62 +4,70 @@ import Print from "./Print";
 import "../styles/Body.css";
 
 class Body extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            name: 'Connor Warme',
-            position: 'Software Engineer',
-            number: '1234567890',
-            email: 'connor.warme@gmail.com',
-            location: 'Phoenix, AZ',
-            github: '',
-            linkedin: '',
-            bio: '',
-            title: 'Software Developer',
-            company: 'MadeItUp',
-            start: '2019',
-            finish: '2022',
-            details: 'I aint sure about this',
-            workstack: [],
-            unistack: [],
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "Connor Warme",
+      position: "Software Engineer",
+      number: "1234567890",
+      email: "connor.warme@gmail.com",
+      location: "Phoenix, AZ",
+      github: "",
+      linkedin: "",
+      bio: "",
+      title: "Software Developer",
+      company: "MadeItUp",
+      start: "2019",
+      finish: "2022",
+      details: "I aint sure about this",
+      workstack: [],
+      unistack: [],
+    };
     this.handlePersonalChange = this.handlePersonalChange.bind(this);
     this.saveCard = this.saveCard.bind(this);
     this.handleWorkChange = this.handleWorkChange.bind(this);
     this.handleUniChange = this.handleUniChange.bind(this);
-}
-handlePersonalChange(e) {
+  }
+  handlePersonalChange(e) {
     this.setState({
-        [e.target.id]: e.target.value,
-    })
-}
-saveCard(e) {
+      [e.target.id]: e.target.value,
+    });
+  }
+  saveCard(e) {
     e.preventDefault();
     // don't really need a save button.. !!!
     console.log(this.state);
-}
-handleWorkChange(updatedArray) {
+  }
+  handleWorkChange(updatedArray) {
     this.setState({
-        workstack: updatedArray,
-    })
-}
-handleUniChange(updatedArray) {
+      workstack: updatedArray,
+    });
+  }
+  handleUniChange(updatedArray) {
     this.setState({
-        unistack: updatedArray,
-    })
-}
+      unistack: updatedArray,
+    });
+  }
 
-    render() {
-        return (
-            <div className="container">
-                <div>
-                    <Edit data={this.state} save={this.saveCard} changeP={this.handlePersonalChange} changeU={this.handleUniChange} changeW={this.handleWorkChange}/>
-                    <button className="generateDemo" onClick={console.log('demo!')}>Generate Demo</button>
-                </div>
-                <Print data={this.state}/>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="container">
+        <div>
+          <Edit
+            data={this.state}
+            save={this.saveCard}
+            changeP={this.handlePersonalChange}
+            changeU={this.handleUniChange}
+            changeW={this.handleWorkChange}
+          />
+          <button className="generateDemo" onClick={console.log("demo!")}>
+            Generate Demo
+          </button>
+        </div>
+        <Print data={this.state} />
+      </div>
+    );
+  }
 }
 
 export default Body;

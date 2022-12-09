@@ -1,29 +1,29 @@
 .colors2 {
-    color: rgb(241, 250, 238);
-    color: rgb(168, 218, 220);
-    color: rgb(69, 123, 157);
-    color: rgb(29, 53, 87);
-    color: rgb(230, 57, 70);
-  }
+  color: rgb(241, 250, 238);
+  color: rgb(168, 218, 220);
+  color: rgb(69, 123, 157);
+  color: rgb(29, 53, 87);
+  color: rgb(230, 57, 70);
+}
 
 .footer {
-    width: inherit;
-    color: rgb(241, 250, 238);
-    background-color: rgb(69, 123, 157);;
+  width: inherit;
+  color: rgb(241, 250, 238);
+  background-color: rgb(69, 123, 157);
 }
 .footerContent {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 .linkContainer {
-    position: relative;
+  position: relative;
 }
 .linkContainer > a > img {
-    height: 40px;
+  height: 40px;
 }
 .linkContainer > a:hover {
-    transform: scale(1.15);
-    filter: invert(100%);
+  transform: scale(1.15);
+  filter: invert(100%);
 }
 .footerText {
-    font-weight: 500;
+  font-weight: 500;
 }

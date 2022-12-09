@@ -1,13 +1,12 @@
-
 .header {
-    width: 100vw;
-    color: rgb(241, 250, 238);
-    background-color: rgb(69, 123, 157);
+  width: 100vw;
+  color: rgb(241, 250, 238);
+  background-color: rgb(69, 123, 157);
 }
 .headerTitle {
-    font-family: 'Stencil';
-    font-size: 80px;
-    font-weight: 600;
-    text-transform: lowercase;
-    padding: 10px 0 18px 0;
+  font-family: "Stencil";
+  font-size: 80px;
+  font-weight: 600;
+  text-transform: lowercase;
+  padding: 10px 0 18px 0;
 }

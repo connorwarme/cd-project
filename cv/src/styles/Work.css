@@ -1,106 +1,105 @@
 .work-component,
 .education-component {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .section-spacer {
-
 }
 .sectionTitleSolo {
-    font-size: 18px;
-    align-self: flex-start;
-    margin-left: 90px;
-    padding-top: 8px;
-    text-transform: uppercase;
+  font-size: 18px;
+  align-self: flex-start;
+  margin-left: 90px;
+  padding-top: 8px;
+  text-transform: uppercase;
 }
 .sectionTitle {
-    display: flex;
-    align-items: flex-end;
-    font-size: 18px;
-    text-transform: uppercase;
+  display: flex;
+  align-items: flex-end;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 .work-unit,
 .ed-unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .spacer {
-    content: "";
+  content: "";
 }
 .header-unit {
-    width: 420px;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 8px;
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
 }
 .header-unit > button {
-    border: none;
-    border-radius: 2px;
-    background-color: rgba(168, 218, 220, 0.5);
-    height: 20px;
-    width: 20px;
-    position: relative;
-    cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(168, 218, 220, 0.5);
+  height: 20px;
+  width: 20px;
+  position: relative;
+  cursor: pointer;
 }
 .header-unit > button::after,
 .header-unit > button::before {
-    content: "";
-    height: 18px;
-    width: 3px;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    top: 1px;
-    left: 8.5px;
-    border-radius: 2px;
+  content: "";
+  height: 18px;
+  width: 3px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 1px;
+  left: 8.5px;
+  border-radius: 2px;
 }
 .header-unit > button::before {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .header-unit > button::after {
-    transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 .header-unit > button:hover {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 1px -1px 4px black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px -1px 4px black;
 }
 .inputContent {
-    background-color: rgb(255, 255, 255);
-    border-radius: 3px;
-    padding: 5px 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  padding: 5px 0;
 }
 .dateContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .dateContainer > div {
-    width: 220px;
+  width: 220px;
 }
 .dateContainer > div > input {
-    width: 180px;
+  width: 180px;
 }
 .addBtn {
-    font-family: 'Faustina';
-    font-size: 16px;
-    font-weight: 500;
-    background-color: white;
-    border: 2px solid rgb(69, 123, 157);
-    border-radius: 2px;
-    padding: 2px 10px 6px 10px;
-    margin: 5px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0, 0, 0.58, 1.0);
+  font-family: "Faustina";
+  font-size: 16px;
+  font-weight: 500;
+  background-color: white;
+  border: 2px solid rgb(69, 123, 157);
+  border-radius: 2px;
+  padding: 2px 10px 6px 10px;
+  margin: 5px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
 }
 .addBtn:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 .addBtn:active {
-    transform: scale(0.98);
-    box-shadow: 1px 1px 3px black;
+  transform: scale(0.98);
+  box-shadow: 1px 1px 3px black;
 }
 .education-component:last-child {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }

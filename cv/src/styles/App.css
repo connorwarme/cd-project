@@ -1,18 +1,20 @@
 @font-face {
-  font-family: 'Stencil';
-  src: local('Stencil'), url(../fonts/BigShouldersStencilText-VariableFont_wght.ttf) format('truetype');
+  font-family: "Stencil";
+  src: local("Stencil"),
+    url(../fonts/BigShouldersStencilText-VariableFont_wght.ttf)
+      format("truetype");
 }
 @font-face {
-  font-family: 'Vollkorn';
-  src: url(../fonts/Vollkorn-VariableFont_wght.ttf) format('truetype');
+  font-family: "Vollkorn";
+  src: url(../fonts/Vollkorn-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Cinzel';
-  src: url(../fonts/Cinzel-VariableFont_wght.ttf) format('truetype');
+  font-family: "Cinzel";
+  src: url(../fonts/Cinzel-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Faustina';
-  src: url(../fonts/Faustina-VariableFont_wght.ttf) format('truetype');
+  font-family: "Faustina";
+  src: url(../fonts/Faustina-VariableFont_wght.ttf) format("truetype");
 }
 body {
   min-width: 900px;

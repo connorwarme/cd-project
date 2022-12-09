@@ -1,53 +1,53 @@
 .container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    background-color: rgb(241, 250, 238);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: rgb(241, 250, 238);
 }
-.editContent, 
+.editContent,
 .printPreview {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(69, 123, 157);
-    border-radius: 3px;
-    box-shadow: 1px 1px 4px rgba(126, 126, 126, 0.4);
-    margin: 15px 0;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(69, 123, 157);
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(126, 126, 126, 0.4);
+  margin: 15px 0;
 }
 .editContent {
-    width: 600px;
+  width: 600px;
 }
 .previewContent {
-    border: none;
+  border: none;
 }
 .printPreview {
-    border: 2px solid rgb(230, 57, 70);
+  border: 2px solid rgb(230, 57, 70);
 }
 .generatePDF,
 .generateDemo {
-    border: 2px solid rgb(69, 123, 157);
-    border-radius: 3px;
-    background-color: rgb(255, 255, 255);
-    font-family: "Vollkorn";
-    font-weight: 600;
-    font-size: 20px;
-    padding: 10px 20px;
-    margin-bottom: 15px;
-    transition-duration: 200ms;
-    transition-timing-function: ease-in;
+  border: 2px solid rgb(69, 123, 157);
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  font-family: "Vollkorn";
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
 }
 .generatePDF:hover,
 .generateDemo:hover {
-    text-decoration: underline 3px rgb(230, 57, 70);
-    cursor: pointer;
+  text-decoration: underline 3px rgb(230, 57, 70);
+  cursor: pointer;
 }
 .generatePDF:active,
 .generateDemo:active {
-    transform: scale(0.98);
-    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  transform: scale(0.98);
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 @media (max-width: 1500px) {
-    .container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

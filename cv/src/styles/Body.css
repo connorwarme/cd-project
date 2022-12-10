@@ -44,7 +44,7 @@
   transform: scale(0.98);
   box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
-@media (max-width: 1500px) {
+@media (max-width: 1550px) {
   .container {
     flex-direction: column;
     justify-content: center;

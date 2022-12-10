@@ -1,5 +1,5 @@
 .previewContent {
-  width: 700px;
+  width: 800px;
   min-height: 500px;
   padding: 40px 60px;
   text-align: start;
@@ -49,6 +49,9 @@
 .preview-personal-container:last-child {
   margin-bottom: 15px;
 }
+.preview-bio {
+  margin-top: 12px;
+}
 .preview-work-header,
 .preview-education-header {
   display: flex;
@@ -58,6 +61,10 @@
   color: rgb(69, 123, 157);
   text-transform: uppercase;
   margin: 12px 0 2px 0;
+}
+.preview-work-unit,
+.preview-ed-unit {
+  margin-bottom: 8px;
 }
 .preview-wu-header,
 .preview-edu-header {

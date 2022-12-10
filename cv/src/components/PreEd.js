@@ -33,6 +33,7 @@ class PreEd extends React.Component {
     const { data } = this.props;
     return (
       <div className="preview-ed-unit">
+        <div className="preview-edu-degree">{data.degree}</div>
         <div className="preview-edu-header">
           <div className="preview-edu-school">{data.school}</div>
           <div className="preview-edu-info">
@@ -41,7 +42,6 @@ class PreEd extends React.Component {
             <div>{this.createDash(data)}</div>
           </div>
         </div>
-        <div className="preview-edu-degree">{data.degree}</div>
         <div className="preview-edu-details">{data.details}</div>
       </div>
     );

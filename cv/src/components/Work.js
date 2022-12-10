@@ -26,6 +26,7 @@ class Career extends React.Component {
       id: uuidv4(),
       title: "",
       company: "",
+      location: "",
       start: "",
       finish: "",
       details: "",

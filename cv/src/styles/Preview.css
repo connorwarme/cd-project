@@ -71,7 +71,7 @@
   display: flex;
   justify-content: space-between;
 }
-.preview-wu-title,
+.preview-wu-company,
 .preview-edu-school {
   color: grey;
   font-weight: 600;
@@ -93,6 +93,7 @@
   font-weight: 700;
   padding: 0 5px;
 }
+.preview-wu-title,
 .preview-edu-degree {
   font-size: large;
   font-weight: 500;

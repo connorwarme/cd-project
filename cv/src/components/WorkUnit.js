@@ -15,7 +15,7 @@ class WorkUnit extends React.Component {
     e.target.parentElement.nextElementSibling.style.backgroundColor = "white";
   }
   render() {
-    const { id, start, finish, company, title, details } = this.props.data;
+    const { id, start, finish, company, location, title, details } = this.props.data;
     const { edit, del, intel } = this.props;
     function headerText(input) {
       return input === 0 ? "Work Experience" : "";
@@ -47,6 +47,7 @@ class WorkUnit extends React.Component {
             holder="Company"
             edit={edit}
           />
+          <Input type="text" id="location" value={location} holder="Location" edit={edit} />
           <div className="dateContainer">
             <Input
               type="text"

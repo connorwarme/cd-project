@@ -33,10 +33,11 @@ class PreWork extends React.Component {
     const { data } = this.props;
     return (
       <div className="preview-work-unit">
+        <div className="preview-wu-title">{data.title}</div>
         <div className="preview-wu-header">
-          <div className="preview-wu-title">{data.title}</div>
+          <div className="preview-wu-company">{data.company}</div>
           <div className="preview-wu-info">
-            <div>{data.company}</div>
+            <div>{data.location}</div>
             <div>{this.createSlash(data)}</div>
             <div>{this.createDash(data)}</div>
           </div>

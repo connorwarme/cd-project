@@ -18,7 +18,7 @@ class Education extends React.Component {
   }
   static getDerivedStateFromProps(props, state) {
     if (props.data !== state.edList) {
-      return { edList: props.data }
+      return { edList: props.data };
     }
     return null;
   }

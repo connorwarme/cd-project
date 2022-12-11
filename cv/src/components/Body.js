@@ -8,11 +8,11 @@ class Body extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "Connor Warme",
-      position: "Software Engineer",
-      number: "1234567890",
-      email: "connor.warme@gmail.com",
-      location: "Phoenix, AZ",
+      name: "",
+      position: "",
+      number: "",
+      email: "",
+      location: "",
       github: "",
       linkedin: "",
       bio: "",
@@ -33,8 +33,6 @@ class Body extends React.Component {
   }
   saveCard(e) {
     e.preventDefault();
-    // don't really need a save button.. !!!
-    console.log(this.state);
   }
   handleWorkChange(updatedArray) {
     this.setState({
@@ -49,7 +47,7 @@ class Body extends React.Component {
   handleDemo() {
     const inputKeys = Object.keys(demoContent);
     console.log(inputKeys);
-    inputKeys.forEach(key => {
+    inputKeys.forEach((key) => {
       if (key === "workstack") {
         this.handleWorkChange(demoContent[key]);
       } else if (key === "unistack") {
@@ -57,23 +55,23 @@ class Body extends React.Component {
       } else {
         this.setState({
           [key]: demoContent[key],
-        })
+        });
       }
-    })
+    });
   }
   handleClearForm() {
     const inputKeys = Object.keys(this.state);
-    inputKeys.forEach(key => {
+    inputKeys.forEach((key) => {
       if (key === "workstack" || key === "unistack") {
         this.setState({
           [key]: [],
-        })
+        });
       } else {
         this.setState({
-          [key]: '',
-        })
+          [key]: "",
+        });
       }
-    })
+    });
   }
 
   render() {

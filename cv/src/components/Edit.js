@@ -4,9 +4,6 @@ import Work from "./Work";
 import Education from "./Education";
 
 class Edit extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { data, save, changeP, changeW, changeU } = this.props;
     return (

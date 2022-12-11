@@ -19,7 +19,7 @@ class Career extends React.Component {
   }
   static getDerivedStateFromProps(props, state) {
     if (props.data !== state.workList) {
-      return { workList: props.data }
+      return { workList: props.data };
     }
     return null;
   }
@@ -71,7 +71,7 @@ class Career extends React.Component {
     const updatedArray = this.state.workList.filter((work) => work.id !== id);
     console.log(updatedArray);
     this.updateState(updatedArray);
-    console.log(this.props.data)
+    console.log(this.props.data);
   }
   addTitle() {
     if (this.state.workList.length === 0) {

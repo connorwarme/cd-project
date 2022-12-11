@@ -3,9 +3,6 @@ import Input from "./Input";
 import "../styles/Personal.css";
 
 class Personal extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { name, position, email, number, location, github, linkedin, bio } =
       this.props.value;

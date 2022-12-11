@@ -1,9 +1,6 @@
 import React from "react";
 
 class Input extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { type, id, value, holder, edit } = this.props;
     return (

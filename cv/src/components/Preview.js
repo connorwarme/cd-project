@@ -5,9 +5,6 @@ import PreEd from "./PreEd";
 import "../styles/Preview.css";
 
 class Preview extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { data } = this.props;
     return (

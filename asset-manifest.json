@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cv-project/static/css/main.ba2337f8.css",
+    "main.js": "/cv-project/static/js/main.edede5d7.js",
+    "static/media/Vollkorn-VariableFont_wght.ttf": "/cv-project/static/media/Vollkorn-VariableFont_wght.bc2539b5e831eba6c069.ttf",
+    "static/media/BigShouldersStencilText-VariableFont_wght.ttf": "/cv-project/static/media/BigShouldersStencilText-VariableFont_wght.eb44e824c2d7af53b77a.ttf",
+    "static/media/Cinzel-VariableFont_wght.ttf": "/cv-project/static/media/Cinzel-VariableFont_wght.41aef329e5d6288b5ca1.ttf",
+    "static/media/Faustina-VariableFont_wght.ttf": "/cv-project/static/media/Faustina-VariableFont_wght.867d88bd79e5c246b274.ttf",
+    "static/media/github.svg": "/cv-project/static/media/github.5eb3d39757ca9be726d68641903cd6e3.svg",
+    "index.html": "/cv-project/index.html",
+    "static/media/linkedin.svg": "/cv-project/static/media/linkedin.bbcb81dd730af01d5340d51d477f8aab.svg",
+    "static/media/phone.svg": "/cv-project/static/media/phone.45e191c9965a1395c85a9cd497ed6f8c.svg",
+    "static/media/map-marker.svg": "/cv-project/static/media/map-marker.8ed820373498e050ba489683231bdef4.svg",
+    "static/media/email.svg": "/cv-project/static/media/email.0e2b03866c7d9320e4bed5218d83d95c.svg",
+    "main.ba2337f8.css.map": "/cv-project/static/css/main.ba2337f8.css.map",
+    "main.edede5d7.js.map": "/cv-project/static/js/main.edede5d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba2337f8.css",
+    "static/js/main.edede5d7.js"
+  ]
+}

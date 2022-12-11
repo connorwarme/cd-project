@@ -22,7 +22,9 @@
   border: 2px solid rgb(230, 57, 70);
 }
 .generatePDF,
-.generateDemo {
+.generateDemo,
+.clearForm {
+  width: 200px;
   border: 2px solid rgb(69, 123, 157);
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
@@ -30,17 +32,19 @@
   font-weight: 600;
   font-size: 20px;
   padding: 10px 20px;
-  margin-bottom: 15px;
+  margin: 0 10px 15px 10px;
   transition-duration: 200ms;
   transition-timing-function: ease-in;
 }
 .generatePDF:hover,
-.generateDemo:hover {
+.generateDemo:hover,
+.clearForm:hover {
   text-decoration: underline 3px rgb(230, 57, 70);
   cursor: pointer;
 }
 .generatePDF:active,
-.generateDemo:active {
+.generateDemo:active,
+.clearForm:active {
   transform: scale(0.98);
   box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }

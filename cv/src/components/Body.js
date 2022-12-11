@@ -2,7 +2,6 @@ import React from "react";
 import Edit from "./Edit";
 import Print from "./Print";
 import demoContent from "./Demo";
-import { v4 as uuidv4 } from "uuid";
 import "../styles/Body.css";
 
 class Body extends React.Component {
@@ -17,40 +16,7 @@ class Body extends React.Component {
       github: "",
       linkedin: "",
       bio: "",
-      title: "Software Developer",
-      company: "MadeItUp",
-      start: "2019",
-      finish: "2022",
-      details: "I aint sure about this",
-      workstack: [
-        // {
-        //   id: uuidv4(),
-        //   title: "Shooting Guard",
-        //   company: "Los Angeles Lakers",
-        //   location: "Los Angeles, CA",
-        //   start: "1996",
-        //   finish: "2016",
-        //   details: "Career Statistics: Points - 25.0ppg (33,643), Rebounds - 5.2rpg (7,047), Assists - 4.7apg (6,306).",
-        // },
-        // {
-        //   id: uuidv4(),
-        //   title: "Basketball Player",
-        //   company: "USA National Team",
-        //   location: "Olympics",
-        //   start: "2008",
-        //   finish: "2012",
-        //   details: "2x Olympic gold medal winner. Bryant had a 26-0 record as a member of the national team.",
-        // },
-        // {
-        //   id: uuidv4(),
-        //   title: "Owner / Writer",
-        //   company: "Granity Studios",
-        //   location: "Newport Beach, CA",
-        //   start: "2013",
-        //   finish: "2020",
-        //   details: "Bryant wrote and narrated 'Dear Basketball', an animated short film based on his retirement poem. It won the Academy Award for Best Animated Short Film in 2017. In doing so, he became the first African-American to win the category and the first former professional athlete to win an Academy Award in any category.",
-        // },
-      ],
+      workstack: [],
       unistack: [],
     };
     this.handlePersonalChange = this.handlePersonalChange.bind(this);
@@ -58,6 +24,7 @@ class Body extends React.Component {
     this.handleWorkChange = this.handleWorkChange.bind(this);
     this.handleUniChange = this.handleUniChange.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
+    this.handleClearForm = this.handleClearForm.bind(this);
   }
   handlePersonalChange(e) {
     this.setState({
@@ -94,6 +61,20 @@ class Body extends React.Component {
       }
     })
   }
+  handleClearForm() {
+    const inputKeys = Object.keys(this.state);
+    inputKeys.forEach(key => {
+      if (key === "workstack" || key === "unistack") {
+        this.setState({
+          [key]: [],
+        })
+      } else {
+        this.setState({
+          [key]: '',
+        })
+      }
+    })
+  }
 
   render() {
     return (
@@ -106,9 +87,14 @@ class Body extends React.Component {
             changeU={this.handleUniChange}
             changeW={this.handleWorkChange}
           />
-          <button className="generateDemo" onClick={this.handleDemo}>
-            Generate Demo
-          </button>
+          <div className="btnContainer">
+            <button className="generateDemo" onClick={this.handleDemo}>
+              Generate Demo
+            </button>
+            <button className="clearForm" onClick={this.handleClearForm}>
+              Clear Form
+            </button>
+          </div>
         </div>
         <Print data={this.state} />
       </div>

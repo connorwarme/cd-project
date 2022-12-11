@@ -4,7 +4,7 @@ const demoContent = {
     name: "Kobe Bryant",
     position: "Basketball Legend / Director",
     number: "1234567890",
-    email: "kobe.bryant@gmail.com",
+    email: "kobe.bryant@mamba.com",
     location: "Los Angeles, CA",
     github: "https://www.youtube.com/watch?v=JHVMW3U5BZE",
     linkedin: "https://www.youtube.com/watch?v=JHVMW3U5BZE",
@@ -47,7 +47,9 @@ const demoContent = {
             degree: "",
             from: "1992",
             to: "1996",
-            details: "In his senior year, Bryant garnered several awards, including: Naismith High School Player of the Year, Gatorade Men's National Basketball Player of the Year, a McDonald's All-American, a first-team Parade All-American and a USA Today All-USA First Team player. He went directly to the pros, becoming just the 6th player in NBA history to do so.",
+            details: "In his senior year, Bryant garnered several awards, including: Naismith High School Player of the Year, Gatorade Men's National Basketball Player of the Year, McDonald's All-American, first-team Parade All-American, and USA Today All-USA First Team player. He went directly to the pros, becoming just the 6th player in NBA history to do so. He was drafted 13th overall in the 1996 NBA Draft by the Charlotte Hornets, then traded to the LA Lakers.",
           }
     ],
 }
+
+export default demoContent;

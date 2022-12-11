@@ -1,33 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import WorkUnit from "./WorkUnit";
 import "../styles/Work.css";
 
-class Career extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      workList: this.props.data,
-    };
-    this.findUnit = this.findUnit.bind(this);
-    this.createNewUnit = this.createNewUnit.bind(this);
-    this.updateState = this.updateState.bind(this);
-    this.findId = this.findId.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.deleteUnit = this.deleteUnit.bind(this);
-    this.addTitle = this.addTitle.bind(this);
-  }
-  static getDerivedStateFromProps(props, state) {
-    if (props.data !== state.workList) {
-      return { workList: props.data };
-    }
-    return null;
-  }
-  findUnit(id) {
+// just started into the process of switching this to fn w/ hooks
+// need to sort out how to do it better than my attempt w/ classes
+
+const Career = () => {
+  const [workList, setWorkList] = useState([]);
+    // this.state = {
+    //   workList: this.props.data,
+    // };
+    // this.findUnit = this.findUnit.bind(this);
+    // this.createNewUnit = this.createNewUnit.bind(this);
+    // this.updateState = this.updateState.bind(this);
+    // this.findId = this.findId.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
+    // this.deleteUnit = this.deleteUnit.bind(this);
+    // this.addTitle = this.addTitle.bind(this);
+
+  // static getDerivedStateFromProps(props, state) {
+  //   if (props.data !== state.workList) {
+  //     return { workList: props.data };
+  //   }
+  //   return null;
+  // }
+
+  const findUnit = (id) => {
     const unit = this.state.workList.find((index) => index.id === id);
     return this.state.workList.indexOf(unit);
   }
-  createNewUnit() {
+  const createNewUnit = () => {
     const unit = {
       id: uuidv4(),
       title: "",
@@ -108,4 +111,11 @@ class Career extends React.Component {
     );
   }
 }
+
+const unit = () => {
+  const [unit, setUnit] = useState({});
+  const [key, setKey] = useState(uuidv4());
+  const [title, setTitle] = useState("");
+}
+
 export default Career;

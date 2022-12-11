@@ -17,6 +17,12 @@ class Career extends React.Component {
     this.deleteUnit = this.deleteUnit.bind(this);
     this.addTitle = this.addTitle.bind(this);
   }
+  static getDerivedStateFromProps(props, state) {
+    if (props.data !== state.workList) {
+      return { workList: props.data }
+    }
+    return null;
+  }
   findUnit(id) {
     const unit = this.state.workList.find((index) => index.id === id);
     return this.state.workList.indexOf(unit);
@@ -65,6 +71,7 @@ class Career extends React.Component {
     const updatedArray = this.state.workList.filter((work) => work.id !== id);
     console.log(updatedArray);
     this.updateState(updatedArray);
+    console.log(this.props.data)
   }
   addTitle() {
     if (this.state.workList.length === 0) {

@@ -16,6 +16,12 @@ class Education extends React.Component {
     this.deleteUnit = this.deleteUnit.bind(this);
     this.addTitle = this.addTitle.bind(this);
   }
+  static getDerivedStateFromProps(props, state) {
+    if (props.data !== state.edList) {
+      return { edList: props.data }
+    }
+    return null;
+  }
   createNewUnit() {
     const unit = {
       id: uuidv4(),

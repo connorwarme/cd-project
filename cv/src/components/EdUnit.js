@@ -1,23 +1,17 @@
 import React from "react";
 import Input from "./Input";
 
-class EdUnit extends React.Component {
-  constructor(props) {
-    super(props);
-    this.hoverOn = this.hoverOn.bind(this);
-    this.hoverOff = this.hoverOff.bind(this);
-  }
-  hoverOn(e) {
+const EdUnit = (props) => {
+  const hoverOn = (e) => {
     e.target.parentElement.nextElementSibling.style.backgroundColor =
       "rgba(168, 218, 220, 0.5)";
   }
-  hoverOff(e) {
+  const hoverOff = (e) => {
     e.target.parentElement.nextElementSibling.style.backgroundColor = "white";
   }
-  render() {
-    const { id, school, location, degree, from, to, details } = this.props.data;
-    const { edit, del, intel } = this.props;
-    function headerText(input) {
+  const { id, school, location, degree, from, to, details } = props.data;
+  const { edit, del, intel } = props;
+  const  headerText = (input) =>{
       return input === 0 ? "Education" : "";
     }
     return (
@@ -26,8 +20,8 @@ class EdUnit extends React.Component {
         <div className="header-unit">
           <div className="sectionTitle">{headerText(intel)}</div>
           <button
-            onMouseEnter={this.hoverOn}
-            onMouseLeave={this.hoverOff}
+            onMouseEnter={hoverOn}
+            onMouseLeave={hoverOff}
             onClick={del}
             title="Delete"
           ></button>
@@ -81,6 +75,5 @@ class EdUnit extends React.Component {
       </div>
     );
   }
-}
 
 export default EdUnit;

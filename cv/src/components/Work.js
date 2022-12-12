@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import WorkUnit from "./WorkUnit";
-import WorkMock from "./WorkMock";
 import "../styles/Work.css";
 
 // just started into the process of switching this to fn w/ hooks
 // need to sort out how to do it better than my attempt w/ classes
 
-const Career = () => {
+const Career = (props) => {
   const [workList, setWorkList] = useState([]);
   const addToList = (object) => {
     setWorkList([...workList, object]);
+    props.change(workList);
   }
   const findId = (e) => {
     let id;
@@ -29,12 +29,14 @@ const Career = () => {
     const objIndex = findUnit(id);
     copyList[objIndex][e.target.id] = e.target.value;
     setWorkList(copyList);
+    props.change(workList);
   }
   const deleteFromList = (e) => {
     const id = e.target.parentElement.parentElement.id;
     const newList = workList.filter(index => index.id !== id);
     console.log(newList);
     setWorkList(newList);
+    props.change(newList);
   }
   const newUnit = () => {
     const unit = {
@@ -47,6 +49,11 @@ const Career = () => {
       details: '',
     }
     return unit;
+  }
+  const addTitle = () => {
+    if (workList.length === 0) {
+      return <div className="sectionTitleSolo">Work Experience</div>;
+    }
   }
     // this.state = {
     //   workList: this.props.data,
@@ -108,6 +115,7 @@ const Career = () => {
   return (
     <div className="work-component">
       <div className="section-spacer"></div>
+      {addTitle()}
         {workList.map((unit, index) => {
           return (
             <WorkUnit key={unit.id} data={unit} edit={editObjInList} del={deleteFromList} intel={index}/>

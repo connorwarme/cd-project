@@ -2,17 +2,17 @@ import React, { useRef } from "react";
 import ReactToPrint from "react-to-print";
 import Preview from "./Preview";
 
-const Print = ({ data }) => {
-  let componentRef = useRef(null);
+const Print = (props) => {
+  const { data, work, ed } = props;
   return (
     <div>
       <div className="printPreview">
-        <Preview data={data} ref={(el) => (componentRef = el)} />
+        <Preview data={data} work={work} ed={ed} />
       </div>
-      <ReactToPrint
+      {/* <ReactToPrint
         trigger={() => <button className="generatePDF">Generate PDF</button>}
-        content={() => componentRef}
-      />
+        content={() => <Preview data={data} work={work} ed={ed} />}
+      /> */}
     </div>
   );
 };

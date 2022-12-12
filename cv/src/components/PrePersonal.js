@@ -6,9 +6,8 @@ import Github from "../icons/github.svg";
 import Linked from "../icons/linkedin.svg";
 
 // preview personal details
-class PrePersonal extends React.Component {
-  render() {
-    const { data } = this.props;
+const PrePersonal = (props) => {
+    const { data } = props;
     return (
       <div>
         <div className="preview-header">
@@ -47,6 +46,5 @@ class PrePersonal extends React.Component {
       </div>
     );
   }
-}
 
 export default PrePersonal;

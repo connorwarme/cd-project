@@ -1,13 +1,9 @@
 import React from "react";
 
 // preview work experience unit
-class PreWork extends React.Component {
-  constructor(props) {
-    super(props);
-    this.createSlash = this.createSlash.bind(this);
-    this.createDash = this.createDash.bind(this);
-  }
-  createSlash(input) {
+const PreWork = (props) => {
+  console.log(props);
+  const createSlash = (input) => {
     if (
       input.company.length > 0 &&
       (input.start.length > 0 || input.finish.length > 0)
@@ -15,7 +11,7 @@ class PreWork extends React.Component {
       return <div> | </div>;
     }
   }
-  createDash(input) {
+  const createDash = (input) => {
     if (input.start.length > 0 && input.finish.length > 0) {
       return (
         <div>
@@ -29,8 +25,7 @@ class PreWork extends React.Component {
       </div>
     );
   }
-  render() {
-    const { data } = this.props;
+    const { data } = props;
     return (
       <div className="preview-work-unit">
         <div className="preview-wu-title">{data.title}</div>
@@ -38,14 +33,13 @@ class PreWork extends React.Component {
           <div className="preview-wu-company">{data.company}</div>
           <div className="preview-wu-info">
             <div>{data.location}</div>
-            <div>{this.createSlash(data)}</div>
-            <div>{this.createDash(data)}</div>
+            <div>{createSlash(data)}</div>
+            <div>{createDash(data)}</div>
           </div>
         </div>
         <div className="preview-wu-details">{data.details}</div>
       </div>
     );
   }
-}
 
 export default PreWork;

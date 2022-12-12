@@ -1,8 +1,7 @@
 import React from "react";
 
-class Input extends React.Component {
-  render() {
-    const { type, id, value, holder, edit } = this.props;
+const Input = (props) => {
+  const { type, id, value, holder, edit } = props;
     return (
       <div>
         <label htmlFor={id} value={holder}></label>
@@ -16,6 +15,5 @@ class Input extends React.Component {
       </div>
     );
   }
-}
 
 export default Input;

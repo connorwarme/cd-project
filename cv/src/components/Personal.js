@@ -2,11 +2,10 @@ import React from "react";
 import Input from "./Input";
 import "../styles/Personal.css";
 
-class Personal extends React.Component {
-  render() {
+const Personal = (props) => {
     const { name, position, email, number, location, github, linkedin, bio } =
-      this.props.value;
-    const { save, change } = this.props;
+      props.data;
+    const { save, change } = props;
     return (
       <div className="personal">
         <div className="personal-title">Personal Details</div>
@@ -72,6 +71,5 @@ class Personal extends React.Component {
       </div>
     );
   }
-}
 
 export default Personal;

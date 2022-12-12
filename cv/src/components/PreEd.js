@@ -1,13 +1,9 @@
 import React from "react";
 
 // preview education unit
-class PreEd extends React.Component {
-  constructor(props) {
-    super(props);
-    this.createSlash = this.createSlash.bind(this);
-    this.createDash = this.createDash.bind(this);
-  }
-  createSlash(input) {
+const PreEd = (props) => {
+  console.log(props);
+  const createSlash = (input) => {
     if (
       input.location.length > 0 &&
       (input.from.length > 0 || input.to.length > 0)
@@ -15,7 +11,7 @@ class PreEd extends React.Component {
       return <div> | </div>;
     }
   }
-  createDash(input) {
+  const createDash = (input) => {
     if (input.from.length > 0 && input.to.length > 0) {
       return (
         <div>
@@ -29,8 +25,7 @@ class PreEd extends React.Component {
       </div>
     );
   }
-  render() {
-    const { data } = this.props;
+    const { data } = props;
     return (
       <div className="preview-ed-unit">
         <div className="preview-edu-degree">{data.degree}</div>
@@ -38,14 +33,13 @@ class PreEd extends React.Component {
           <div className="preview-edu-school">{data.school}</div>
           <div className="preview-edu-info">
             <div>{data.location}</div>
-            <div>{this.createSlash(data)}</div>
-            <div>{this.createDash(data)}</div>
+            <div>{createSlash(data)}</div>
+            <div>{createDash(data)}</div>
           </div>
         </div>
         <div className="preview-edu-details">{data.details}</div>
       </div>
     );
   }
-}
 
 export default PreEd;

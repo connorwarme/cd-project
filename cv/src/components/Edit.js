@@ -3,17 +3,15 @@ import Personal from "./Personal";
 import Work from "./Work";
 import Education from "./Education";
 
-class Edit extends React.Component {
-  render() {
-    const { data, save, changeP, changeW, changeU } = this.props;
+const Edit = (props) => {
+    const { data, work, ed, save, changeP, changeW, changeE } = props;
     return (
       <div className="editContent">
-        <Personal value={data} save={save} change={changeP} />
-        <Work data={data.workstack} change={changeW} />
-        <Education data={data.unistack} change={changeU} />
+        <Personal data={data} save={save} change={changeP} />
+        <Work data={work} change={changeW} />
+        <Education data={ed} change={changeE} />
       </div>
     );
   }
-}
 
 export default Edit;

@@ -3,8 +3,7 @@ import Github from "../icons/github.svg";
 import Linked from "../icons/linkedin.svg";
 import "../styles/Footer.css";
 
-class Footer extends React.Component {
-  render() {
+const Footer = () => {
     return (
       <div className="footer">
         <div className="footerContent">
@@ -23,6 +22,5 @@ class Footer extends React.Component {
       </div>
     );
   }
-}
 
 export default Footer;

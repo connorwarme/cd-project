@@ -4,23 +4,21 @@ import PreWork from "./PreWork";
 import PreEd from "./PreEd";
 import "../styles/Preview.css";
 
-class Preview extends React.Component {
-  render() {
-    const { data } = this.props;
+const Preview = (props) => {
+    const { data, work, ed } = props;
     return (
       <div className="previewContent">
         <PrePersonal data={data} />
         <div className="preview-work-header">Work Experience</div>
-        {data.workstack.map((work) => {
-          return <PreWork key={work.id} data={work} />;
+        {work.map((workUnit) => {
+          return <PreWork key={workUnit.id} data={workUnit} />;
         })}
         <div className="preview-education-header">Education</div>
-        {data.unistack.map((school) => {
+        {ed.map((school) => {
           return <PreEd key={school.id} data={school} />;
         })}
       </div>
     );
   }
-}
 
 export default Preview;

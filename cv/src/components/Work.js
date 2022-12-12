@@ -12,10 +12,41 @@ const Career = () => {
   const addToList = (object) => {
     setWorkList([...workList, object]);
   }
-  const deleteFromList = (object) => {
-    const newList = workList.filter(index => index.id !== object.id);
+  const findId = (e) => {
+    let id;
+    if (e.target.id === "start" || e.target.id === "finish") {
+      id = e.target.parentElement.parentElement.parentElement.parentElement.id;
+    } else {
+      id = e.target.parentElement.parentElement.parentElement.id;
+    }
+    return id;
+  } 
+  const findUnit = (id) => workList.findIndex(item => item.id === id);
+
+  const editObjInList = (e) => {
+    const copyList = [...workList];
+    const id = findId(e);
+    const objIndex = findUnit(id);
+    copyList[objIndex][e.target.id] = e.target.value;
+    setWorkList(copyList);
+  }
+  const deleteFromList = (e) => {
+    const id = e.target.parentElement.parentElement.id;
+    const newList = workList.filter(index => index.id !== id);
     console.log(newList);
     setWorkList(newList);
+  }
+  const newUnit = () => {
+    const unit = {
+      id: uuidv4(),
+      title: '',
+      company: '',
+      location: '',
+      start: '',
+      finish: '',
+      details: '',
+    }
+    return unit;
   }
     // this.state = {
     //   workList: this.props.data,
@@ -35,11 +66,6 @@ const Career = () => {
   //   return null;
   // }
 
-  // const findUnit = (id) => {
-  //   const unit = this.state.workList.find((index) => index.id === id);
-  //   return this.state.workList.indexOf(unit);
-  // }
-
   //   this.setState({
   //     workList: this.state.workList.concat(unit),
   //   });
@@ -49,16 +75,7 @@ const Career = () => {
   //     workList: updatedList,
   //   });
   //   this.props.change(updatedList);
-  // }
-  // findId(e) {
-  //   let id;
-  //   if (e.target.id === "start" || e.target.id === "finish") {
-  //     id = e.target.parentElement.parentElement.parentElement.parentElement.id;
-  //   } else {
-  //     id = e.target.parentElement.parentElement.parentElement.id;
-  //   }
-  //   return id;
-  // }
+  // } 
   // handleChange(e) {
   //   const id = this.findId(e);
   //   const index = this.findUnit(id);
@@ -93,10 +110,10 @@ const Career = () => {
       <div className="section-spacer"></div>
         {workList.map((unit, index) => {
           return (
-            <WorkMock key={unit.id} set={setWorkList} list={workList} del={() => deleteFromList(unit)}/>
+            <WorkUnit key={unit.id} data={unit} edit={editObjInList} del={deleteFromList} intel={index}/>
           )
         })}
-      <button className="addBtn" onClick={() => addToList({id: uuidv4()})}>
+      <button className="addBtn" onClick={() => addToList(newUnit())}>
         Add
       </button>
     </div>

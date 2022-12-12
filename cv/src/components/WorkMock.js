@@ -1,35 +1,17 @@
 import React, { useState } from "react";
 
 const WorkMock = (props) => {
-
-    const [unit, setUnit] = useState({
-        id: props.id,
-        title: "",
-        company: "",
-        location: "",
-        start: "",
-        finish: "",
-        details: "",
-    })
-    const updateList = () => {
-        const copyList = [...props.list];
-        let itemIndex = copyList.indexOf(item => item.id === unit.id);
-        copyList[itemIndex] = unit;
-        console.log(copyList);
-        props.set(copyList);
-    }
+    const { id, title, company, location } = props.data;
+    const { edit, del } = props;
     const editUnit = (e) => {
-        setUnit({...unit, [e.target.id]: e.target.value});
-        updateList();
+        console.log(e.target.id)
     }
-
-
     return (
-        <div id={unit.id}>
-            <input id="title" value={unit.title} onChange={editUnit} />
-            <input id="company" value={unit.company} onChange={editUnit} />
-            <input id="location" value={unit.location} onChange={editUnit} />
-            <button onClick={props.del}>Delete</button>
+        <div id={id}>
+            <input id="title" value={title} onChange={edit} />
+            <input id="company" value={company} onChange={edit} />
+            <input id="location" value={location} onChange={edit} />
+            <button onClick={del}>Delete</button>
         </div>
     )
 }

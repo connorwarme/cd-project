@@ -12,8 +12,8 @@ const Career = (props) => {
   const addToList = () => {
     setWorkList([...workList, newUnit()]);
     props.change(workList);
-    console.log('fire');
-  }
+    console.log("fire");
+  };
   const findId = (e) => {
     let id;
     if (e.target.id === "start" || e.target.id === "finish") {
@@ -22,8 +22,8 @@ const Career = (props) => {
       id = e.target.parentElement.parentElement.parentElement.id;
     }
     return id;
-  } 
-  const findUnit = (id) => workList.findIndex(item => item.id === id);
+  };
+  const findUnit = (id) => workList.findIndex((item) => item.id === id);
 
   const editObjInList = (e) => {
     const copyList = [...workList];
@@ -32,34 +32,34 @@ const Career = (props) => {
     copyList[objIndex][e.target.id] = e.target.value;
     setWorkList(copyList);
     props.change(workList);
-  }
+  };
   const deleteFromList = (e) => {
     const id = e.target.parentElement.parentElement.id;
-    const newList = workList.filter(index => index.id !== id);
+    const newList = workList.filter((index) => index.id !== id);
     setWorkList(newList);
     props.change(newList);
-  }
+  };
   const newUnit = () => {
     const unit = {
       id: uuidv4(),
-      title: '',
-      company: '',
-      location: '',
-      start: '',
-      finish: '',
-      details: '',
-    }
+      title: "",
+      company: "",
+      location: "",
+      start: "",
+      finish: "",
+      details: "",
+    };
     return unit;
-  }
+  };
   const addTitle = () => {
     if (workList.length === 0) {
       return <div className="sectionTitleSolo">Work Experience</div>;
     }
-  }
+  };
   const loadDemo = () => {
     const inputKeys = Object.keys(demoContent);
     setWorkList(demoContent[inputKeys[1]]);
-  }
+  };
   useEffect(() => {
     if (props.show === true) {
       loadDemo();
@@ -68,78 +68,28 @@ const Career = (props) => {
       setWorkList([]);
     }
   }, [props.show, props.clear]);
-    // this.state = {
-    //   workList: this.props.data,
-    // };
-    // this.findUnit = this.findUnit.bind(this);
-    // this.createNewUnit = this.createNewUnit.bind(this);
-    // this.updateState = this.updateState.bind(this);
-    // this.findId = this.findId.bind(this);
-    // this.handleChange = this.handleChange.bind(this);
-    // this.deleteUnit = this.deleteUnit.bind(this);
-    // this.addTitle = this.addTitle.bind(this);
 
-  // static getDerivedStateFromProps(props, state) {
-  //   if (props.data !== state.workList) {
-  //     return { workList: props.data };
-  //   }
-  //   return null;
-  // }
-
-  //   this.setState({
-  //     workList: this.state.workList.concat(unit),
-  //   });
-  // }
-  // updateState(updatedList) {
-  //   this.setState({
-  //     workList: updatedList,
-  //   });
-  //   this.props.change(updatedList);
-  // } 
-  // handleChange(e) {
-  //   const id = this.findId(e);
-  //   const index = this.findUnit(id);
-  //   const objCopy = { ...this.state.workList[index] };
-  //   objCopy[e.target.id] = e.target.value;
-  //   const workListCopy = [...this.state.workList];
-  //   workListCopy[index] = objCopy;
-  //   this.updateState(workListCopy);
-  // }
-  // deleteUnit(e) {
-  //   const id = e.target.parentElement.parentElement.id;
-  //   console.log(id);
-  //   const updatedArray = this.state.workList.filter((work) => work.id !== id);
-  //   console.log(updatedArray);
-  //   this.updateState(updatedArray);
-  //   console.log(this.props.data);
-  // }
-  // addTitle() {
-  //   if (this.state.workList.length === 0) {
-  //     return <div className="sectionTitleSolo">Work Experience</div>;
-  //   }
-  // }
-  // componentDidMount() {
-  //   window.addEventListener("load", this.createNewUnit);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener("load", this.createNewUnit);
-  // }
   return (
     <div className="work-component">
       <div className="section-spacer"></div>
       {addTitle()}
-        {workList.map((unit, index) => {
-          return (
-            <WorkUnit key={unit.id} data={unit} edit={editObjInList} del={deleteFromList} intel={index}/>
-          )
-        })}
+      {workList.map((unit, index) => {
+        return (
+          <WorkUnit
+            key={unit.id}
+            data={unit}
+            edit={editObjInList}
+            del={deleteFromList}
+            intel={index}
+          />
+        );
+      })}
       <button className="addBtn" onClick={addToList}>
         Add
       </button>
     </div>
   );
-}
+};
 
 // {workList.map((unit, index) => {
 //   return (

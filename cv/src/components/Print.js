@@ -8,11 +8,11 @@ const Print = (props) => {
   return (
     <div>
       <div className="printPreview">
-        <Preview data={data} work={work} ed={ed} ref={componentRef}/>
+        <Preview data={data} work={work} ed={ed} ref={componentRef} />
       </div>
       <ReactToPrint
         trigger={() => <button className="generatePDF">Generate PDF</button>}
-        content={() => componentRef.current }
+        content={() => componentRef.current}
       />
     </div>
   );

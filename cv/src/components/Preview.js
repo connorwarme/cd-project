@@ -4,10 +4,10 @@ import PreWork from "./PreWork";
 import PreEd from "./PreEd";
 import "../styles/Preview.css";
 
-const Preview = (props) => {
+const Preview = React.forwardRef((props, ref) => {
     const { data, work, ed } = props;
     return (
-      <div className="previewContent">
+      <div className="previewContent" ref={ref}>
         <PrePersonal data={data} />
         <div className="preview-work-header">Work Experience</div>
         {work.map((workUnit) => {
@@ -19,6 +19,6 @@ const Preview = (props) => {
         })}
       </div>
     );
-  }
+  })
 
 export default Preview;

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cv-project/static/css/main.ba2337f8.css",
-    "main.js": "/cv-project/static/js/main.516a8f3a.js",
+    "main.js": "/cv-project/static/js/main.e278e30a.js",
     "static/media/Vollkorn-VariableFont_wght.ttf": "/cv-project/static/media/Vollkorn-VariableFont_wght.bc2539b5e831eba6c069.ttf",
     "static/media/BigShouldersStencilText-VariableFont_wght.ttf": "/cv-project/static/media/BigShouldersStencilText-VariableFont_wght.eb44e824c2d7af53b77a.ttf",
     "static/media/Cinzel-VariableFont_wght.ttf": "/cv-project/static/media/Cinzel-VariableFont_wght.41aef329e5d6288b5ca1.ttf",
@@ -13,10 +13,10 @@
     "static/media/map-marker.svg": "/cv-project/static/media/map-marker.8ed820373498e050ba489683231bdef4.svg",
     "static/media/email.svg": "/cv-project/static/media/email.0e2b03866c7d9320e4bed5218d83d95c.svg",
     "main.ba2337f8.css.map": "/cv-project/static/css/main.ba2337f8.css.map",
-    "main.516a8f3a.js.map": "/cv-project/static/js/main.516a8f3a.js.map"
+    "main.e278e30a.js.map": "/cv-project/static/js/main.e278e30a.js.map"
   },
   "entrypoints": [
     "static/css/main.ba2337f8.css",
-    "static/js/main.516a8f3a.js"
+    "static/js/main.e278e30a.js"
   ]
 }

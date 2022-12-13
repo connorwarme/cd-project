@@ -1,3 +1,31 @@
+# [CV Creator](https://connorwarme.github.io/cv-project/)
+![previewDemo](https://github.com/connorwarme/cv-project/blob/main/screenshots/demodisplay.png?raw=true "preview demo")  
+  
+## objectives  
+* use React (first time)  
+* initial build w/ class components, then rebuilt w/ functional components  
+* 3 content sections: personal, work experience, and education  
+* utilize react-to-print to provide option to "Generate PDF"  
+* added "Demo" content, along w/ a "Clear Form" button  
+  
+## reflections  
+* content with result (for a simple project)  
+* took a minute to wrap my mind around state and props  
+* functional components made more sense / felt intuitive  
+* only built for bigger screens (tablet or laptop/desktop)  
+  
+## screenshots  
+* initial (short form and long form)  
+![initial](https://github.com/connorwarme/cv-project/blob/main/screenshots/initial.png?raw=true "initial")  
+![initiallong](https://github.com/connorwarme/cv-project/blob/main/screenshots/initiallong.png?raw=true "initiallong")  
+* generate PDF  
+![demopdf](https://github.com/connorwarme/cv-project/blob/main/screenshots/demoprint.png?raw=true "demopdf")  
+  
+## improvements  
+* would love to design a mobile friendly UI!  
+  
+  
+  
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

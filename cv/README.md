@@ -5,7 +5,7 @@
 * use React (first time)  
 * initial build w/ class components, then rebuilt w/ functional components  
 * 3 content sections: personal, work experience, and education  
-* utilize react-to-print to provide option to "Generate PDF"  
+* utilize react-to-print to provide option to "Generate PDF" (* works in Firefox, Chrome doesn't retain styling...still needs a fix *)    
 * added "Demo" content, along w/ a "Clear Form" button  
   
 ## reflections  
@@ -22,6 +22,7 @@
 ![demopdf](https://github.com/connorwarme/cv-project/blob/main/screenshots/demoprint.png?raw=true "demopdf")  
   
 ## improvements  
+* bug - "Generate PDF" doesn't retain styling in Chrome (why? works in Firefox)  
 * would love to design a mobile friendly UI!  
   
 # Getting Started with Create React App

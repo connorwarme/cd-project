@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import WorkUnit from "./WorkUnit";
+import demoContent from "./Demo";
 import "../styles/Work.css";
 
 // just started into the process of switching this to fn w/ hooks
@@ -8,9 +9,10 @@ import "../styles/Work.css";
 
 const Career = (props) => {
   const [workList, setWorkList] = useState([]);
-  const addToList = (object) => {
-    setWorkList([...workList, object]);
+  const addToList = () => {
+    setWorkList([...workList, newUnit()]);
     props.change(workList);
+    console.log('fire');
   }
   const findId = (e) => {
     let id;
@@ -55,6 +57,16 @@ const Career = (props) => {
       return <div className="sectionTitleSolo">Work Experience</div>;
     }
   }
+  const loadDemo = () => {
+    const inputKeys = Object.keys(demoContent);
+    setWorkList(demoContent[inputKeys[1]]);
+  }
+  useEffect(() => {
+    if (props.show === true) {
+      loadDemo();
+    }
+    console.log('use effect firing');
+  }, [props.show])
     // this.state = {
     //   workList: this.props.data,
     // };
@@ -121,7 +133,7 @@ const Career = (props) => {
             <WorkUnit key={unit.id} data={unit} edit={editObjInList} del={deleteFromList} intel={index}/>
           )
         })}
-      <button className="addBtn" onClick={() => addToList(newUnit())}>
+      <button className="addBtn" onClick={addToList}>
         Add
       </button>
     </div>

@@ -5,8 +5,8 @@ import "../styles/Education.css";
 
 const Education = (props) => {
   const [edList, setEdList] = useState([]);
-  const addToList = (object) => {
-    setEdList([...edList, object]);
+  const addToList = () => {
+    setEdList([...edList, newUnit()]);
     props.change(edList);
   }
   const findId = (e) => {

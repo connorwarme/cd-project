@@ -17,7 +17,7 @@ const Body = () => {
   })
   const [masterWorkList, setMasterWorkList] = useState([]);
   const [masterEdList, setMasterEdList] = useState([]);
-
+  const [showDemo, setShowDemo] = useState(false);
   const handlePersonalChange = (e) => {
     setPersonal({...personal, [e.target.id]: e.target.value})
   }; 
@@ -30,21 +30,16 @@ const Body = () => {
   const handleEdChange = (updatedArray) => {
     setMasterEdList(updatedArray);
   }
-  // handleDemo() {
-  //   const inputKeys = Object.keys(demoContent);
-  //   console.log(inputKeys);
-  //   inputKeys.forEach((key) => {
-  //     if (key === "workstack") {
-  //       this.handleWorkChange(demoContent[key]);
-  //     } else if (key === "unistack") {
-  //       this.handleUniChange(demoContent[key]);
-  //     } else {
-  //       this.setState({
-  //         [key]: demoContent[key],
-  //       });
-  //     }
-  //   });
-  // }
+  const handleDemo = () => {
+    const inputKeys = Object.keys(demoContent);
+    setPersonal(demoContent[inputKeys[0]]);
+    handleWorkChange(demoContent[inputKeys[1]]);
+    handleEdChange(demoContent[inputKeys[2]]);
+    setShowDemo(true);
+    setTimeout(() => {
+      setShowDemo(false);
+      console.log('demo set to false');}, 1000);
+  }
   // handleClearForm() {
   //   const inputKeys = Object.keys(this.state);
   //   inputKeys.forEach((key) => {
@@ -70,9 +65,10 @@ const Body = () => {
             changeP={handlePersonalChange}
             changeE={handleEdChange}
             changeW={handleWorkChange}
+            showD={showDemo}
           />
           <div className="btnContainer">
-            <button className="generateDemo">
+            <button className="generateDemo" onClick={handleDemo}>
               Generate Demo
             </button>
             <button className="clearForm" >

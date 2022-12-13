@@ -1,16 +1,18 @@
 import { v4 as uuidv4 } from "uuid";
 
 const demoContent = {
-  name: "Kobe Bryant",
-  position: "Basketball Legend / Director",
-  number: "1234567890",
-  email: "kobe.bryant@mamba.com",
-  location: "Los Angeles, CA",
-  github: "https://www.youtube.com/watch?v=JHVMW3U5BZE",
-  linkedin: "https://www.youtube.com/watch?v=JHVMW3U5BZE",
-  bio: `Five NBA championships. 18x All-Star. 15x member of the All-NBA Team. 12x member of the All-Defensive Team. 2008 NBA Most Valuable Player (MVP). 2x NBA Finals MVP. Bryant led the NBA in scoring twice, and ranks fourth in league all-time regular season and postseason scoring. In 2020, Bryant was voted into the Naismith Memorial Basketball Hall of Fame (posthumously).
-    He died in a tragic helicopter crash alongside his daughter Gianna in January 2020. He is survived by his wife, Vanessa, and his daughters Natalia, Bianka, and Capri.`,
-  workstack: [
+  personalList: {
+    name: "Kobe Bryant",
+    position: "Basketball Legend / Director",
+    number: "1234567890",
+    email: "kobe.bryant@mamba.com",
+    location: "Los Angeles, CA",
+    github: "https://www.youtube.com/watch?v=JHVMW3U5BZE",
+    linkedin: "https://www.youtube.com/watch?v=JHVMW3U5BZE",
+    bio: `Five NBA championships. 18x All-Star. 15x member of the All-NBA Team. 12x member of the All-Defensive Team. 2008 NBA Most Valuable Player (MVP). 2x NBA Finals MVP. Bryant led the NBA in scoring twice, and ranks fourth in league all-time regular season and postseason scoring. In 2020, Bryant was voted into the Naismith Memorial Basketball Hall of Fame (posthumously).
+      He died in a tragic helicopter crash alongside his daughter Gianna in January 2020. He is survived by his wife, Vanessa, and his daughters Natalia, Bianka, and Capri.`,
+  },
+  workList: [
     {
       id: uuidv4(),
       title: "Shooting Guard",
@@ -42,7 +44,7 @@ const demoContent = {
         "Bryant wrote and narrated 'Dear Basketball', an animated short film based on his retirement poem. It won the Academy Award for Best Animated Short Film in 2017. In doing so, he became the first African-American to win the category and the first former professional athlete to win an Academy Award in any category.",
     },
   ],
-  unistack: [
+  edList: [
     {
       id: uuidv4(),
       school: "Lower Merion High School",

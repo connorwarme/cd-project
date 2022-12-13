@@ -64,7 +64,10 @@ const Career = (props) => {
     if (props.show === true) {
       loadDemo();
     }
-  }, [props.show]);
+    if (props.clear === true) {
+      setWorkList([]);
+    }
+  }, [props.show, props.clear]);
     // this.state = {
     //   workList: this.props.data,
     // };

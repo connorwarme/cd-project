@@ -60,7 +60,10 @@ const Education = (props) => {
     if (props.show === true) {
       loadDemo();
     }
-  }, [props.show]);
+    if (props.clear === true) {
+      setEdList([]);
+    }
+  }, [props.show, props.clear]);
     return (
       <div className="education-component">
         <div className="section-spacer"></div>

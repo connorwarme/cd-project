@@ -10,7 +10,7 @@
 .sectionTitleSolo {
   font-size: 18px;
   align-self: flex-start;
-  margin-left: 90px;
+  margin-left: 40px;
   padding-top: 8px;
   text-transform: uppercase;
 }
@@ -30,7 +30,7 @@
   content: "";
 }
 .header-unit {
-  width: 420px;
+  width: 320px;
   display: flex;
   justify-content: space-between;
   padding-top: 8px;
@@ -75,10 +75,10 @@
   justify-content: center;
 }
 .dateContainer > div {
-  width: 220px;
+  width: 170px;
 }
 .dateContainer > div > input {
-  width: 180px;
+  width: 130px;
 }
 .addBtn {
   font-family: "Faustina";

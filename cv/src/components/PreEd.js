@@ -2,7 +2,6 @@ import React from "react";
 
 // preview education unit
 const PreEd = (props) => {
-  console.log(props);
   const createSlash = (input) => {
     if (
       input.location.length > 0 &&

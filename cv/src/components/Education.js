@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { v4 as uuidv4 } from "uuid";
 import EdUnit from "./EdUnit";
+import demoContent from "./Demo";
 import "../styles/Education.css";
 
 const Education = (props) => {
@@ -31,7 +32,6 @@ const Education = (props) => {
   const deleteFromList = (e) => {
     const id = e.target.parentElement.parentElement.id;
     const newList = edList.filter(index => index.id !== id);
-    console.log(newList);
     setEdList(newList);
     props.change(newList);
   }
@@ -52,6 +52,15 @@ const Education = (props) => {
       return <div className="sectionTitleSolo">Education</div>;
     }
   }
+  const loadDemo = () => {
+    const inputKeys = Object.keys(demoContent);
+    setEdList(demoContent[inputKeys[2]]);
+  }
+  useEffect(() => {
+    if (props.show === true) {
+      loadDemo();
+    }
+  }, [props.show]);
     return (
       <div className="education-component">
         <div className="section-spacer"></div>

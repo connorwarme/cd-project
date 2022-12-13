@@ -38,7 +38,7 @@ const Body = () => {
     setShowDemo(true);
     setTimeout(() => {
       setShowDemo(false);
-      console.log('demo set to false');}, 1000);
+    }, 1000);
   }
   // handleClearForm() {
   //   const inputKeys = Object.keys(this.state);

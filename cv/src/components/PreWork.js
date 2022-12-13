@@ -2,7 +2,6 @@ import React from "react";
 
 // preview work experience unit
 const PreWork = (props) => {
-  console.log(props);
   const createSlash = (input) => {
     if (
       input.company.length > 0 &&

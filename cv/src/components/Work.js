@@ -36,7 +36,6 @@ const Career = (props) => {
   const deleteFromList = (e) => {
     const id = e.target.parentElement.parentElement.id;
     const newList = workList.filter(index => index.id !== id);
-    console.log(newList);
     setWorkList(newList);
     props.change(newList);
   }
@@ -65,8 +64,7 @@ const Career = (props) => {
     if (props.show === true) {
       loadDemo();
     }
-    console.log('use effect firing');
-  }, [props.show])
+  }, [props.show]);
     // this.state = {
     //   workList: this.props.data,
     // };
